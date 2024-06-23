@@ -1,0 +1,29 @@
+.offroom{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin-top: 30px;
+}
+.offroom div img{
+    width: 96%;
+    height: 300px;
+    
+    margin-right: 15px;
+}
+.offroom h3,h5{
+    color: rgb(59, 56, 56);
+}
+.offimg h3,h5{
+    color: rgb(59, 56, 56);
+}
+.offimg{
+    display: flex;
+    justify-content: space-evenly;
+
+    max-width: 100%;
+}
+.offimg div img{
+    width: 100%;
+    height: 300px;
+
+}

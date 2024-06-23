@@ -1,0 +1,37 @@
+.summer{
+    display: flex;
+    width: 96.5%;
+    margin-left: 20px;
+    height: 100px;
+    justify-content: center;
+    background-color: #f0ede8;
+}
+.summer h3{
+   margin-top: 40px;
+}
+.butts{
+    position: static;
+    
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    background-color: black;
+    color: #fff;
+    
+    margin-left: 10px;
+   
+}
+.offimg1 h3,h5{
+    color: rgb(59, 56, 56);
+}
+.offimg1{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+}
+.offimg1 div img{
+    width: 94%;
+    height: 300px;
+
+}

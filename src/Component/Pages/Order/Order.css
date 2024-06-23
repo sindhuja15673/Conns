@@ -1,0 +1,157 @@
+.order{
+    display:flex;
+    justify-content: space-around;
+    max-width: initial;
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    cursor: auto;
+
+}
+.orders1{
+    max-width: 50%;
+    border-right: 1px solid #d1d1d4;
+    border-bottom: none;
+    position: relative;
+    padding: 72px 72px;
+    padding-bottom: 118px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+.orders1 h1{
+    text-align: center;
+    font-size: 30px;
+    line-height: 44px;
+    color: #1a1b29;
+    font-weight: 600;
+    margin: 0;
+    font-family: Lora, serif;
+    letter-spacing: .25px;
+    margin-bottom: 48px;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.orders1 label{
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    display: block !important;
+    color: #333;
+    cursor: pointer;
+    font-weight: 700;
+    
+
+}
+/* .orders1 div{
+    margin-left: 500px;
+} */
+.orders1 input{
+    background: #fff;
+    margin: 0;
+    margin-top: 6px;
+    border: 1px solid #babbbf;
+    height: 48px;
+    width: 100%;
+    box-shadow: none;
+    color: #333;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 0;
+    
+    padding: .75rem;
+    box-sizing: border-box;
+    transition: border-color .15s linear, background .15s linear;
+}
+
+
+.submitbutton{
+    width: 100%;
+    background: #1a1b29;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    border-radius: 0;
+    margin: 0;
+    margin-top: 32px;
+    padding: 12px 0;
+    border-color: #444;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    outline: 0;
+    vertical-align: middle;
+    text-transform: none;
+    overflow: visible;
+}
+.orderstatus{
+    float: right;
+    padding: 72px 72px;
+    padding-bottom: 0;
+    border-bottom: none;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    max-width: 50%;
+    /* margin-left: 200px; */
+}
+
+.orderstatus h1{
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 600;
+    color: #1a1b29;
+    margin: 0;
+    margin-bottom: 48px;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    font-family: Lora, serif;
+    letter-spacing: .25px;
+}
+.orderstatus h4{
+    text-align: center;
+    font-size: 18px;
+
+}
+.submitbutton1{
+    font-size: 20px;
+    width: 100%;
+    line-height: 28px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Lora, Arial, Helvetica, sans-serif;
+    margin-bottom: 64px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin: 0;
+    background: #1a1b29;
+    border-color: #444;
+    overflow: visible;
+
+}

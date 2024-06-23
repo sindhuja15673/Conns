@@ -1,0 +1,128 @@
+.finance{
+    width: 100%;
+}
+.finimg img{
+    width:100% ;
+    padding: 20px;
+    height: 500px;
+    
+}
+.finimg{
+    position: relative;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width:100%;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border: 0;
+    vertical-align: middle;
+}
+.fincontent{
+    width:40% ;
+    height: auto !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 24px !important;
+    min-height: auto !important;
+    backdrop-filter: blur(16px);
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 40px;
+
+}
+.way{
+    display: flex;
+    column-gap: 16px;
+}
+.way div{
+    width: 100%;
+    border-radius: 4px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 2px 5px 0px rgba(26, 27, 41, 0.20);
+    padding: 16px 24px;
+    align-self: stretch;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.finbut{
+    background-color: black !important;
+    color: #fff !important;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 200px !important;
+    
+}
+.list1 .list{
+    border-right: 1px solid #d1d1d4 !important;
+}
+.list img{
+    display: flex;
+    justify-content: space-around;
+    
+    width: 100%;
+    height: 100%;
+    max-width: 260.185px;
+    min-height: 40px;
+   
+}
+.list{
+    height: 20px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    
+    padding: 30px;
+}
+.list:last-child{
+    border-right: none;
+}
+.word::before{
+    content: "FINANCE";
+    color: red;
+}
+.fimg{
+    display: flex;
+    
+    gap: 0px;
+    height: 300px;
+}
+.fimg1{
+    display: inline-block;
+    width: 50%;
+    height: 300px ;
+    margin-left: 60px;
+}
+.fimg2{
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+    background-color: #d1d1d4;
+    margin-right: 50px;
+    padding: 20px;
+}
+.fimg2 h1{
+    margin-top: -10px;
+}
+
+.finbut1{
+    background-color: black !important;
+    color: #fff !important;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 200px !important;
+    text-align: center;
+    margin-left: 180px;
+    
+}

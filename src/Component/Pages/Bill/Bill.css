@@ -1,0 +1,239 @@
+.pay{
+    margin-bottom: 8px !important;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    line-height: 32px !important;
+    font-weight: 600 !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bill{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 1280px !important;
+    padding: 0 16px !important;
+    box-sizing: border-box;
+    display: block;
+    unicode-bidi: isolate;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.bill2{
+    border-left: 1px solid #D9D9D9;
+    height: 395px;
+    padding: 0 16px;
+    width: 33.33333%;
+    position: relative;
+    float: left;
+}
+.bill2 h1{
+    color: #1a1b29 !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600 !important;
+}
+.bill1{
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0 16px;
+    width: 50%;
+    position: relative;
+    float: left;
+    display: block;
+    unicode-bidi: isolate;
+}
+.bill1 p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px !important;
+    margin-bottom: 16px !important;
+    line-height: 20px !important;
+    font-weight: 400;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    
+}
+.bill1 h1{
+    color: #1a1b29 !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600 !important;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.cards{
+    display: flex;
+
+    gap: 10px;
+
+}
+.card1{
+    height: 20px;
+    margin-top: 5px;
+}
+.card{
+    height: 20px;
+    margin-top: 20px;
+}
+.pay1{
+    background: #fff;
+    width: 250px;
+    color: #1a1b29;
+    border: 1px solid #1a1b29;
+    margin-right: 24px;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    border-color:3px solid black;
+    margin-left: 0px;
+}
+.sign2{
+    color: #fff !important;
+    margin-left: 0px;
+    width:250px;
+    background: #31323e;
+    outline: 0 !important;
+    text-decoration: none;
+    box-shadow: none !important;
+    cursor: pointer;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    border: 2px solid transparent;
+    display: flex !important;
+    -webkit-box-align: center;
+    padding: 12px 56px;
+    align-items: center;
+    -webkit-box-pack: center;
+    font-weight: 600;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    transition: color .15s ease;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.sign1{
+    text-decoration: none;
+    margin-left: 0px;
+    width: 250px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: #1a1b29;
+    border: 2px solid transparent;
+    display: flex !important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 12px 56px;
+    font-weight: 600;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    transition: color .15s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.question{
+    display: block;
+    max-width: 1216px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    background: 0 0;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    cursor: auto;
+}
+.question h1{
+    color: #1A1B29;
+    font-family: 'Open Sans';
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
+    margin-bottom: 36px;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-style: normal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+}
+.question ul{
+    background-color: #ffffff !important;
+    margin: 0;
+    list-style: none;
+    padding-inline-start: 0;
+    border: 1px solid #d1d1d4;
+    border-width: 1px 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+
+    color: #333;
+    cursor: auto;
+}
+.question li:first-of-type{
+
+    animation-delay: .5s;
+}
+.question li{
+    animation: flipdown .5s ease both;
+    position: relative;
+    
+    color: #333;
+    margin: 0;
+    list-style: none;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.quest {
+    animation: flipdown .5s ease both;
+    position: relative;
+    
+    margin: 0;
+    list-style: none;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    cursor: pointer;
+    border-bottom: 1px solid #d1d1d4; 
+}
+
+.quest:last-child {
+    border-bottom: none; 
+}
+
+.quest h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quest p {
+    display: none;
+}
+
+.quest.expanded p {
+    display: block; 
+}
