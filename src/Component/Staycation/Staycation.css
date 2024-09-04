@@ -24,7 +24,9 @@
 }
 .offimg1 h3,h5{
     color: rgb(59, 56, 56);
+    text-align: center;
 }
+
 .offimg1{
     display: flex;
     justify-content: space-around;
@@ -33,5 +35,5 @@
 .offimg1 div img{
     width: 94%;
     height: 300px;
-
+    margin-left: 10px;
 }

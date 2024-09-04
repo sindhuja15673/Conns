@@ -27,7 +27,7 @@ const Offers = () => {
                         </div>
                     
                 </div>
-                <button className='butt'>Shop Appliance <IoIosArrowForward /></button>
+                <button className='butt' id='butt'>Shop Appliance <IoIosArrowForward /></button>
 
                 
             </div>

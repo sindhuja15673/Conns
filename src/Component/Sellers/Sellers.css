@@ -1,5 +1,5 @@
 .sel {
-    background-color: #f0ede8;
+    background-color: #f0ede8 ;
     width: 97.8%;
     margin-left: 25px;
     text-align: center;
@@ -12,6 +12,7 @@
 }
 .sell {
     margin-bottom: 20px;
+    margin-left: 180px;
      
 }
 
@@ -21,6 +22,7 @@
     color: rgb(59, 56, 56);
     cursor: pointer; 
     position: relative;
+    
 }
 
 hr {
@@ -44,15 +46,14 @@ hr {
     display: inline-block;
     position: absolute;
     margin-left: -200px;
-    
     color: #fff;
     width: 35px;
-    height: 15px;
+    
     background-color: #D10A24;
 }
 
 .app1 div a {
-    margin-top: 95px;
+    margin-top: -23px;
     
 }
 .app1{
@@ -64,7 +65,7 @@ hr {
     height: 500px;
 }
 .app1 img {
-    
+    position: relative;
     width: 200px;
     height: 200px;
     
@@ -86,6 +87,10 @@ hr {
     width: 100%; 
     left: 0; 
 }
-.imgcontent{
-    width: 250px;
+.imgcontentts{
+    width: 200px;
+    padding: 10px;
+}
+.imgcontentts h2,h5{
+    text-align: start !important;
 }

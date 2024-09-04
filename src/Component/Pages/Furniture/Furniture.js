@@ -3,6 +3,7 @@ import "../Furniture/Furniture.css";
 import stay2 from "../../../images/stay2.jpg";
 import Category from "../../Category/Category";
 import Brand from '../../Brand/Brand';
+import { Link } from 'react-router-dom';
 
 const Appliance = () => {
     return (
@@ -15,9 +16,9 @@ const Appliance = () => {
                 <div className='fuimg2'>
                     <h1>Save Up to 40% on Furniture</h1>
                     <p>PLUS $300 In Free Home Accessories With Furniture Purchases $2999+</p>
-                    <div className='appbut1'>Prequalify Now</div>
+                    <div className='appbut1'><Link style={{textDecoration:"none", color:"white"}} to='/sofa'>Prequalify Now</Link></div>
                 </div>
-                <div className='fuimg1'><img src={stay2}></img></div>
+                <div className='fuimg1'><Link to='/sofa'><img src={stay2}></img></Link></div>
             </div>
             </div>
             <Category/>
@@ -27,9 +28,9 @@ const Appliance = () => {
                     <h1>
                     Villa Hill </h1>
                     <p>Custom Upholstery Collection Creates Stylish And Comfortable Rooms With An Inviting Style</p>
-                    <div className='apbut1'>Prequalify Now</div>
+                    <div className='apbut1'><Link style={{textDecoration:"none", color:"black"}} to='/sofa'>Prequalify Now</Link></div>
                 </div>
-                <div className='fuimg1'><img src={stay2}></img></div>
+                <div className='fuimg1'><Link to='/sofa'><img src={stay2}></img></Link></div>
             </div>
             <Brand/>
             <div className='applist'>

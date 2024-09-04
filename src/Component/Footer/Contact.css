@@ -32,10 +32,11 @@
 }
 .email button{
     display: inline-block;
-    margin-top: -51px;
-    margin-left: 503px;
+    margin-top: -29px;
+    margin-left: 480px;
     width: 110px;
-    height: 51px;
+    padding: 5px 0px;
+    /* height: 51px; */
     background-color: black;
     color: #fff;
     
@@ -91,10 +92,12 @@
 }
 .phone button{
     display: inline-block;
-    margin-top: -51px;
-    margin-left: 503px;
+    margin-top: -29px;
+    margin-left: 480px;
     width: 110px;
-    height: 51px;
+    /* height: 51px; */
+
+    padding: 5px 0px;
     background-color: black;
     color: #fff;
 
@@ -102,8 +105,9 @@
 .opt{
     margin-top: 10px;
     text-align: center;
-
+    
     background-color: #f0ede8;
+    max-width: 100%;
     width: 410px;
     height: 55px;
     border-radius: 3px;
@@ -120,10 +124,12 @@
     font-weight: bold;
     display: inline-block;
     margin-top: 15px;
+    
 }
 .cont{
     display: flex;
     justify-content: space-around;
+    
 }
 .contactinfo{
 
@@ -174,6 +180,7 @@
 }
 .container{
     display:flex;
+    height: 80px;
     margin-top:50px;
 }
 

@@ -3,6 +3,7 @@ import "../Appliance/Appliance.css";
 import app from "../../../images/appliances.jpg";
 import Category from "../../Category/Category";
 import Brand from '../../Brand/Brand';
+import { Link } from 'react-router-dom';
 
 const Appliance = () => {
     return (
@@ -13,7 +14,7 @@ const Appliance = () => {
                 <div className='aimg2'>
                     <h1>Good credit or building credit, Conn’s HomePlus will work with you!</h1>
                     <p>With so many financing options, we have a payment option for everyone to get you the products you want for your lifestyle.</p>
-                    <div className='appbut1'>Prequalify Now</div>
+                    <div className='appbut1'><Link style={{textDecoration:"none", color:"white"}} to='/appliances1'>Prequalify Now</Link></div>
                 </div>
                 <div className='aimg1'><img src={app}></img></div>
             </div>

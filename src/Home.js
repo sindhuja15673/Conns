@@ -26,8 +26,6 @@ function Home(){
             <Staycation />
             <Mattress />
             <Brand />
-           
-           
           </>
         
     );

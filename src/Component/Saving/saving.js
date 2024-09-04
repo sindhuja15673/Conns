@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Offers/Offers.css";
+import "../Saving/Saving.css";
 import { IoIosArrowForward } from "react-icons/io";
 import save1 from "../../images/save1.jpg";
 import save2 from "../../images/save2.jpg";
@@ -50,7 +50,7 @@ const Offers = () => {
                         </div>
                     
                 </div>
-                <button className='butt'>Shop Electronics <IoIosArrowForward /></button>
+                <button className='butt' id='butt'>Shop Electronics <IoIosArrowForward /></button>
             </div>
         </div>
     );

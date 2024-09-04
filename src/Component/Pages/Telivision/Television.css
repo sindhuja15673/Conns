@@ -1,0 +1,85 @@
+.television{
+    max-width: 100%;
+    display: flex;
+}
+.tele{
+    background-color: #f0ede8;
+    padding: 1px 0px;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+.tele h1{
+    text-align: center;
+}
+.tel{
+    
+    width: 74%;
+    margin-left: 5px;
+}
+.tel1{
+    width: 25%;
+}
+.storedet{
+    display: block;
+    max-height: calc(100vh - 170px);
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+.telimg{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.telecart{
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0ede8;
+    gap: 10px;
+    justify-content: space-around;
+}
+.telecontent{
+    text-align: start;
+    font-size: 14px;
+    height: 200px;
+    
+}
+.telecontent p,a,h1,div{
+    text-align: start;
+    
+}
+.teleimg{
+    width: 300px;
+    height: 650px;
+    
+}
+.teleimg img{
+    width: 300px;
+    height: 250px;
+    margin-top: 10px;
+    
+}
+.teleimg button{
+    text-align: center;
+    background-color: white;
+    padding: 15px 0px;
+    width: 300px;
+    border: 1px solid black;
+    margin-left: -1px;
+    margin-top: 20px;
+}
+.teleimg button:hover{
+    background-color: #f0ede8;
+}
+/* .teleimg button:active{
+    background-color: palegoldenrod;
+} */
+.teleimg button:focus{
+    background-color:#D10A24;
+}

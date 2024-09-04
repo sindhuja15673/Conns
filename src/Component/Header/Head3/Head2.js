@@ -180,8 +180,8 @@ const Head2 = () => {
                 </div>
             </div>
             <div className='option'>
-                TV &Electronics
-                <div className='dropdown-content1'>
+                <Link to='/tv'>TV &Electronics</Link>
+                <div className='dropdown-content1' id='content1'>
                 <span>
                     <li className='droplist3'><a><h2><strong>Shop All Electronics</strong></h2></a></li>
                     <li className='droplist3'><a><strong>Televisions</strong></a></li>
@@ -227,7 +227,7 @@ const Head2 = () => {
                 </div>
             </div>
             <div className='option'>
-                Computer
+                <Link to='/computer'>Computer</Link>
                 <div className='dropdown-content1'>
                 <span>
                     <li className='droplist3'><a><strong>Shop All Computers</strong></a></li>
@@ -259,7 +259,7 @@ const Head2 = () => {
                 </div>
             </div>
             <div className='option'>
-                Mattresses and Bedding
+               <Link to='/bedding'>Mattresses and Bedding</Link> 
                 <div className='dropdown-content1'>
                 <span>
                     <li className='droplist3'><a><strong>Shop All Mattresses</strong></a></li>
@@ -281,8 +281,8 @@ const Head2 = () => {
                 </div>
             </div>
             <div className='option'>
-                Outdoor
-                <div className='dropdown-content1'>
+               <Link to="/outdoor">Outdoor</Link> 
+                <div className='dropdown-content1' id='content1'>
                 <span>
                     <li className='droplist3'><a><strong>Shop All Outdoor</strong></a></li>
                     <li className='droplist3'><a>Outdoor Living & Patio</a></li>
@@ -311,13 +311,10 @@ const Head2 = () => {
             </div>
             <div className='option'>
                 Outlet center
-                <div className='dropdown-content1'>
-                
-                </div>
             </div>
             <div className='option'>
                 Clearance
-                <div className='dropdown-content1'>
+                <div className='dropdown-content1' id='contents'>
                 <span>
                     <li className='droplist3'><a><strong>Shop All Clearance</strong></a></li>
                     <li className='droplist3'><a>Clearance Appliances</a></li>
@@ -368,8 +365,8 @@ const Head2 = () => {
                 </div>
             </div>
             <div className='option'>
-                Buying Guide
-                <div className='dropdown-content'>
+               <Link to="/sale"> Buying Guide</Link>
+                <div className='dropdown-content' id='content'>
                 <li className='droplist1'><a>Refrigerators</a></li>
                         <li className='droplist1'><a>Washers & Dryers</a></li>
                         <li className='droplist1'><a>Living Room</a></li>

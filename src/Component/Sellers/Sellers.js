@@ -23,7 +23,7 @@ const Sellers = () => {
                     <div><img src={dryer}></img>
                         <div><a className='det'>Sale</a></div>
                     </div>
-                    <div className='imgcontent'>
+                    <div className='imgcontentts'>
                         <h5>klhyrertyiiygyt</h5>
                         <h2>$99.99</h2>
                         <h5>oitytutyhihuijii</h5>

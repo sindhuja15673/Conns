@@ -18,7 +18,7 @@
     display: inline-block;
     width: 30%;
     height: 300px;
-    background-color: #d1d1d4;
+    background-color: #f0ede8;
     margin-left: 20px;
     padding: 20px;
 }
@@ -35,4 +35,16 @@
     text-align: center;
     margin-left: 180px;
     
+}
+.applist{
+    text-align: start;
+    padding: 15px;
+}
+.applist h5{
+    color: rgb(46, 44, 44);
+}
+
+.applist p{
+    color: rgb(54, 53, 53);
+    text-align: start;
 }

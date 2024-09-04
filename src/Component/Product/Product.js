@@ -17,14 +17,14 @@ const Product = () => {
 
             <div className='offer'>
                 <a>
-                    <img className='img1'  src={tv}></img>
+                   <Link to='/television'><img className='img1'  src={tv}></img></Link> 
                     
                 </a>
                 <div><a className='details'>See Details</a></div>
             </div>
             <div className='offer'>
                 <a>
-                    <img className='img1' src={computer}></img>
+                    <Link to='/laptop'><img className='img1' src={computer}></img></Link>
                 </a>
                 <div><a className='details'>See Details</a></div>
             </div>
@@ -49,15 +49,15 @@ const Product = () => {
                         <span>Appliances</span>
                     </div>
                     <div className='app'>
-                        <a><img className='appliance' src={sofa}></img></a>
+                        <a><Link to='/sofa'><img className='appliance' src={sofa}></img></Link></a>
                         <span>Furnitures</span>
                     </div>
                     <div className='app'>
-                        <a><img className='appliance' src={tvs}></img></a>
+                        <a><Link to='/television'><img className='appliance' src={tvs}></img></Link></a>
                         <span>TVs</span>
                     </div>
                     <div className='app'>
-                        <a><img className='appliance' src={matress}></img></a>
+                        <a><Link to='/matress2'><img className='appliance' src={matress}></img></Link></a>
                         <span>Mattresses</span>
                     </div>
                 </div>

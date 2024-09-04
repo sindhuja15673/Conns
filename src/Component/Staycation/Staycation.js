@@ -38,22 +38,19 @@ const Offers = () => {
                     <div><img src={stay3}></img>
                     <h3>Living Room Sets</h3>
                     <h5>Starting At $1,399.99</h5></div>
-                    <div><img src={stay4}></img>
-                    
+                    <div><img src={stay4}></img>                   
                     <h3>Sectionals</h3>
                     <h5>Starting At $1,199.99</h5></div>
                     <div><img src={stay5}></img>
-                    
                     <h3>Bedroom Sets</h3>
                     <h5>Starting At $999.99</h5></div>
-                    <div><img src={stay6}></img>
-                    
+                    <div><img src={stay6}></img>                   
                     <h3>Dining Room</h3>
                     <h5>Starting At $799.99</h5></div>
                     
                 </div>
                 
-                <button className='butt'>Shop Furniture <IoIosArrowForward /></button>
+                <button className='butt' id='butt'>Shop Furniture <IoIosArrowForward /></button>
             </div>
         </div>
     );

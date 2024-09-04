@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from 'react';
 import "../Brand/Brand.css";
 import brand1 from '../../images/brand1.webp';
 import brand2 from '../../images/brand2.webp';
@@ -39,10 +38,11 @@ const images = [
 
 const Brand = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleCount, setVisibleCount] = useState(4); 
+    const [visibleCount, setVisibleCount] = useState(4);
+    const intervalRef = useRef(null);
+    const brandRef = useRef(null);
 
     useEffect(() => {
-       
         const updateVisibleCount = () => {
             const width = window.innerWidth;
             if (width >= 1200) {
@@ -64,12 +64,56 @@ const Brand = () => {
         };
     }, []);
 
+    useEffect(() => {
+        startAutoScroll();
+        return () => stopAutoScroll();
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setCurrentIndex(0);
+                    stopAutoScroll();
+                    startAutoScroll();
+                }
+            },
+            { threshold: 0.5 } 
+        );
+
+        if (brandRef.current) {
+            observer.observe(brandRef.current);
+        }
+
+        return () => {
+            if (brandRef.current) {
+                observer.unobserve(brandRef.current);
+            }
+        };
+    }, []);
+
+    const startAutoScroll = () => {
+        intervalRef.current = setInterval(() => {
+            handleNextClick();
+        }, 2000); 
+    };
+
+    const stopAutoScroll = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    };
+
     const handlePrevClick = () => {
         setCurrentIndex((prevIndex) => (prevIndex - visibleCount + images.length) % images.length);
+        stopAutoScroll();
+        startAutoScroll();
     };
 
     const handleNextClick = () => {
         setCurrentIndex((prevIndex) => (prevIndex + visibleCount) % images.length);
+        stopAutoScroll();
+        startAutoScroll();
     };
 
     const visibleImages = images.slice(currentIndex, currentIndex + visibleCount).concat(
@@ -77,10 +121,10 @@ const Brand = () => {
     ).slice(0, visibleCount);
 
     return (
-        <div className='brand'>
+        <div className='brand' ref={brandRef}>
             <h1>Brands We Love</h1>
             <div className='brandcontent'>
-                <button className="prev2" onClick={handlePrevClick}>&#10094;</button>
+                <button className="prev2" onMouseEnter={stopAutoScroll} onMouseLeave={startAutoScroll} onClick={handlePrevClick}>&#10094;</button>
                 <div className="brand-items">
                     {visibleImages.map((image, index) => (
                         <div key={index}>
@@ -91,11 +135,10 @@ const Brand = () => {
                         </div>
                     ))}
                 </div>
-                <button className="next2" onClick={handleNextClick}>&#10095;</button>
+                <button className="next2" onMouseEnter={stopAutoScroll} onMouseLeave={startAutoScroll} onClick={handleNextClick}>&#10095;</button>
             </div>
         </div>
     );
 }
 
 export default Brand;
-

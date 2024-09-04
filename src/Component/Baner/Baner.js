@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import furniture from "../../images/furniture.jpg";
 import prequalify from "../../images/prequal.jpg";
 import tvs from "../../images/best-new-tvs.png";
 import "../Baner/Baner.css";
+import { Link } from 'react-router-dom';
 
 const Baner = () => {
     const images = [furniture, tvs];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [animationClass, setAnimationClass] = useState('');
+    const intervalRef = useRef(null);
+
+    const startAutoScroll = () => {
+        intervalRef.current = setInterval(() => {
+            handleNextClick();
+        }, 3000);
+    };
 
     const handlePrevClick = () => {
         setAnimationClass('slide-out-right');
@@ -15,6 +23,7 @@ const Baner = () => {
             setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
             setAnimationClass('slide-in-left');
         }, 0); 
+        resetAutoScroll();
     };
 
     const handleNextClick = () => {
@@ -23,7 +32,24 @@ const Baner = () => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
             setAnimationClass('slide-in-right');
         }, 0); 
+        resetAutoScroll();
     };
+
+    const resetAutoScroll = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+        startAutoScroll();
+    };
+
+    useEffect(() => {
+        startAutoScroll();
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, []);
 
     return (
         <div className='baner'>
@@ -34,7 +60,7 @@ const Baner = () => {
                         key={index}
                     >
                         <a>
-                            <img className='img' src={image} alt={`slide ${index + 1}`} />
+                            <Link to="/television"><img className='img' src={image} alt={`slide ${index + 1}`} /></Link> 
                         </a>
                         {index === 0 && (
                             <div>

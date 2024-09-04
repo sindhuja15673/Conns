@@ -19,6 +19,10 @@ import yt1 from "../../images/yt1.webp";
 import pinterest1 from "../../images/pinterest1.webp";
 
 const Contact = () => {
+    
+    const handleClick = ()=>{
+        alert('your Email Id is successfully sent');
+    }
     return (
         <div>
             <div className = 'contact'>
@@ -28,7 +32,7 @@ const Contact = () => {
                         <h5>By entering your email address and clicking the <strong>"Submit"</strong> button, you are consenting to recieve marketing email from Conn Appliances, Inc.</h5>
 
                         <br></br>
-                        <input placeholder='Enter your email address'></input><button>Submit</button>
+                        <input placeholder='Enter your email address'></input><button onClick={handleClick}>Submit</button>
                     </div>
                     <div className='phone'>
                         <h4><LuMessageSquare />Opt in for Conn's Text Club</h4>
@@ -80,6 +84,8 @@ const Contact = () => {
                         </ul>
                     </div>
                 </div>
+                <br></br>
+                <br></br>
                 <div className='container'>
                 <div className='image-container1'>
                     <img className='image1' src={logo} alt="Logo"></img>

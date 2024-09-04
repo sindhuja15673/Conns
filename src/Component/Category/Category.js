@@ -16,6 +16,7 @@ import dishwash from "../../images/dishwasher.webp";
 import ranges from "../../images/ranges.webp";
 import conns from "../../images/conns-homeplus.jpg";
 import samsung from "../../images/samsung.webp";
+import { Link } from 'react-router-dom';
 
 const Category = () => {
     return (
@@ -27,14 +28,14 @@ const Category = () => {
                     <br></br><h4>Washers and dryers</h4></a></div>
                     <div><a><img className='cateimg' src={refridge}></img>
                     <br></br><h4>Refrigerators</h4></a></div>
-                    <div><a><img className='cateimg' src={tv2}></img>
-                    <br></br><h4>TVs</h4></a></div>
+                    <div><a><Link to='/television'><img className='cateimg' src={tv2}></img></Link>
+                    <br></br><h4><Link style={{textDecoration:"none",color:"black"}} to='/television'>TVs</Link></h4></a></div>
                     <div><a><img className='cateimg' src={bed}></img>
                     <br></br><h4>BedRoom</h4></a></div>
-                    <div><a><img className='cateimg' src={sofa2}></img>
-                    <br></br><h4>Living Room</h4></a></div>
-                    <div><a><img className='cateimg' src={computer}></img>
-                    <br></br><h4>Computer</h4></a></div>
+                    <div><a><Link to='/sofa'><img className='cateimg' src={sofa2}></img></Link>
+                    <br></br><h4><Link style={{textDecoration:"none",color:"black"}} to='/sofa'>Living Room</Link></h4></a></div>
+                    <div><a><Link to='/laptop'><img className='cateimg' src={computer}></img></Link>
+                    <br></br><h4><Link style={{textDecoration:"none",color:"black"}} to='/laptop'>Computer</Link></h4></a></div>
                     <div><a><img className='cateimg' src={laptop}></img>
                     <br></br><h4>Apple Computers</h4></a></div>
                     <div><a><img className='cateimg' src={game}></img>

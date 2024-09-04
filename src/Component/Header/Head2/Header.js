@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../Head2/Header.css";
 import { GrLocation } from "react-icons/gr";
 import { IoIosArrowDown } from "react-icons/io";
@@ -15,12 +16,18 @@ import { FaTools } from "react-icons/fa";
 import { TbMessageCircle } from "react-icons/tb";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';  // Import useSelector to access the Redux state
 
 const Header = () => {
     const [storeDropdownVisible, setStoreDropdownVisible] = useState(false);
     const [accountDropdownVisible, setAccountDropdownVisible] = useState(false);
     const storeDropdownRef = useRef(null);
     const accountDropdownRef = useRef(null);
+    
+    const cart = useSelector((state) => state.cart.cart);
+
+    const navigate = useNavigate();
+    const [searchQuery, setSearchQuery] = useState('');
 
     const toggleStoreDropdown = () => {
         setStoreDropdownVisible(!storeDropdownVisible);
@@ -48,9 +55,40 @@ const Header = () => {
         };
     }, []);
 
+    const searchRoutes = {
+        television: '/television',
+        tv: '/television',
+        electronics:'/television',
+        appliances: '/appliances1',
+        refridge: '/appliances1',
+        washing: '/appliances1',
+        dry: '/appliances1',
+        computer: '/laptop',
+        laptop:'/laptop',
+        furniture:'/sofa',
+        sofa:'/sofa',
+        matress:'/matress2',
+        bed:'/matress2',
+        patio:'/patio',
+        outdoor:'/patio',
+        chair:'/patio',
+    };
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        const query = searchQuery.toLowerCase();
+        const matchedRoute = Object.keys(searchRoutes).find(key => query.includes(key));
+
+        if (matchedRoute) {
+            navigate(searchRoutes[matchedRoute]);
+        } else {
+            alert('No results found');
+        }
+    };
+
     return (
         <div className='header'>
-            <div className='logo'></div>
+           <Link to='/'> <div className='logo' ></div></Link>
             <div className='store' ref={storeDropdownRef}>
                 <div>
                     <span className='img'><GrLocation /></span>
@@ -65,67 +103,70 @@ const Header = () => {
                         <div className="use">
                             <input className='int' placeholder='    7702'></input>
                             <br></br>
-
                             <a>use my location</a>
                         </div>
                         <div className='storedet'>
-                        <div className='storedetail'>
-                            <h6>store</h6>
-                            <div>
-                                <h3>Conn's HomePlus Houston</h3>
-                                <h6>0.43 miles</h6>
+                            <div className='storedetail'>
+                                <h6>store</h6>
+                                <div>
+                                    <h3>Conn's HomePlus Houston</h3>
+                                    <h6>0.43 miles</h6>
+                                </div>
+                                <a>Conn's HomePlus Houston</a>
+                                <a>4446 NORTH FREEWAY</a><br></br>
+                                <a>HOUSTON, Texas 77022</a>
+                                <strong> (713)864-5490</strong>
+                                <h4>Closes at 9:30 pm today</h4>
                             </div>
-                            <a>Conn's HomePlus Houston</a>
-                            <a>4446 NORTH FREEWAY</a><br></br>
-                            <a>HOUSTON, Texas 77022</a>
-                            <strong> (713)864-5490</strong>
-                            <h4>Closes at 9:30 pm today</h4>
-                        </div>
-                        <div className='storedetail'>
-                            <h6>store</h6>
-                            <div>
-                                <h3>Conn's HomePlus Houston</h3>
-                                <h6>0.43 miles</h6>
+                            <div className='storedetail'>
+                                <h6>store</h6>
+                                <div>
+                                    <h3>Conn's HomePlus Houston</h3>
+                                    <h6>0.43 miles</h6>
+                                </div>
+                                <a>Conn's HomePlus Houston</a>
+                                <a>4446 NORTH FREEWAY</a>
+                                <a>HOUSTON, Texas 77022</a>
+                                <strong> (713)864-5490</strong>
+                                <h4>Closes at 9:30 pm today</h4>
                             </div>
-                            <a>Conn's HomePlus Houston</a>
-                            <a>4446 NORTH FREEWAY</a>
-                            <a>HOUSTON, Texas 77022</a>
-                            <strong> (713)864-5490</strong>
-                            <h4>Closes at 9:30 pm today</h4>
-                        </div>
-                        <div className='storedetail'>
-                            <h6>store</h6>
-                            <div>
-                                <h3>Conn's HomePlus Houston</h3>
-                                <h6>0.43 miles</h6>
+                            <div className='storedetail'>
+                                <h6>store</h6>
+                                <div>
+                                    <h3>Conn's HomePlus Houston</h3>
+                                    <h6>0.43 miles</h6>
+                                </div>
+                                <a>Conn's HomePlus Houston</a>
+                                <a>4446 NORTH FREEWAY</a>
+                                <a>HOUSTON, Texas 77022</a>
+                                <strong> (713)864-5490</strong>
+                                <h4>Closes at 9:30 pm today</h4>
                             </div>
-                            <a>Conn's HomePlus Houston</a>
-                            <a>4446 NORTH FREEWAY</a>
-                            <a>HOUSTON, Texas 77022</a>
-                            <strong> (713)864-5490</strong>
-                            <h4>Closes at 9:30 pm today</h4>
-                        </div>
-
                         </div>
                     </div>
                 </div>
                 <div className='time'><strong>Closes at 9:30pm</strong></div>
             </div>
-            <div className='input'>
-                <input className='input1' placeholder='Search (e.g., Sofa under $800)' />
-                <button><IoSearch /></button>
-            </div>
+            <form className='input' onSubmit={handleSearch}>
+                <input 
+                    className='input1' 
+                    placeholder='Search (e.g., Sofa under $800)' 
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type='submit'><IoSearch /></button>
+            </form>
             <div className='titlecls'>
                 <div className='title'>
-                    <BiDollarCircle />
+                    <BiDollarCircle /><br></br>
                     <span className='title1'>Prequalify Now</span>
                 </div>
                 <div className='title'>
-                    <RiMoneyDollarBoxFill />
+                    <RiMoneyDollarBoxFill /><br></br>
                     <span className='title1'><Link to="/bill">Pay My Bill</Link></span>
                 </div>
                 <div className='title' ref={accountDropdownRef} onClick={toggleAccountDropdown}>
-                    <LuUser2 />
+                    <LuUser2 /><br></br>
                     <span className='title1'>My Account</span>
                     <div className={`dropdown ${accountDropdownVisible ? 'visible' : ''}`}>
                         <div className='dashtitle'>
@@ -148,8 +189,9 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='title'>
-                    <RiShoppingCartLine />
+                    <RiShoppingCartLine /><br></br>
                     <span className='title1'><Link to="/cart">Cart</Link></span>
+                    {cart.length > 0 && <span className='cart-count'>{cart.length}</span>}
                 </div>
             </div>
         </div>
