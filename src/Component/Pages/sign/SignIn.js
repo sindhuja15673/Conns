@@ -1,81 +1,15 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import './SignIn.css';
-//  // Assume you have some styles for the form
-
-// const SignIn = () => {
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
-//     const [error, setError] = useState('');
-//     const [loading, setLoading] = useState(false);
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         setLoading(true);
-//         setError('');
-
-//         try {
-//             const response = await axios.post('/api/auth/signin', { email, password });
-//             // Handle successful login here (e.g., save token, redirect)
-//             console.log('Login successful:', response.data);
-//         } catch (err) {
-//             setError('Invalid email or password');
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
-
-//     return (
-//         <>
-//         <div className="signin-form">
-//             <h2>Sign In</h2>
-//             <form onSubmit={handleSubmit}>
-//                 <div className="form-group">
-//                     <label htmlFor="email">Email</label>
-//                     <input
-//                         type="email"
-//                         id="email"
-//                         value={email}
-//                         onChange={(e) => setEmail(e.target.value)}
-//                         required
-//                     />
-//                 </div>
-
-//                 <div className="form-group">
-//                     <label htmlFor="password">Password</label>
-//                     <input
-//                         type="password"
-//                         id="password"
-//                         value={password}
-//                         onChange={(e) => setPassword(e.target.value)}
-//                         required
-//                     />
-//                 </div>                
-//                 {error && <div className="error-message">{error}</div>}
-//                 <button className='formbutton' type="submit" disabled={loading}>
-//                     {loading ? 'Signing in...' : 'Sign In'}
-//                 </button>
-//             </form>
-//         </div>
-//         </>
-//     );
-// };
-
-// export default SignIn;
-
-
-
-
 import React, { useState } from 'react';
 import './SignIn.css';
+import { useNavigate } from 'react-router-dom'; 
 
-const Login = () => {
+const SignIn = () => {
     const[loginForm, setLoginForm]= useState({
         userName: '',
         password: ''
     })
 
     const [error, setError] = useState('');
+    const navigate = useNavigate(); 
     
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -114,7 +48,9 @@ const Login = () => {
         return '';
     };
 
-
+    const handleClick = ()=>{
+        alert('SignIn successfully')
+    }
     const handleSubmit = (e)=>{
         e.preventDefault();
         const { userName, password } = loginForm;
@@ -131,30 +67,31 @@ const Login = () => {
         }
 
         setError('');
-        
+        navigate('/');
     }
 
     const {userName,password} = loginForm;
     const isButtonDisabled = !userName || !password;
     return (
-        
-        <div className='login'>
-            <form className='form' onSubmit={handleSubmit} >
-                <h2>Login Form</h2>
+        <div >
+        <div className='login1'>
+            <form className='formss' onSubmit={handleSubmit} >
+                <h2>SignIn Form</h2>
                 {error && <p className='error'>{error}</p>}
-                <div className='input-field'>          
+                <div className='input-field1'>          
                     <input type='text' name='userName' value={userName} onChange={handleChange} onBlur={validateUserName}>
                     </input>
                     <label >UserName:</label>
                 </div>
-                <div className='input-field'>            
+                <div className='input-field1'>            
                     <input type='password' name='password' value={password} onChange={handleChange}></input>
                     <label >Password:</label>
                 </div>
-                <button type='submit' disabled={isButtonDisabled}>Login</button>
+                <button className='button1' type='submited'  >SignIn</button>
             </form>
+        </div>
         </div>
     );
 }
 
-export default Login;
+export default SignIn;
