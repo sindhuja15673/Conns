@@ -154,7 +154,7 @@ const Header = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button type='submit'><IoSearch /></button>
+                <button className='button' type='submit'><IoSearch /></button>
             </form>
             <div className='titlecls'>
                 <div className='title'>

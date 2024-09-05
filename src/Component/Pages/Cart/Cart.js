@@ -22,7 +22,7 @@ const Cart = () => {
              <h2>It looks like your cart is empty</h2>
              <h5>Not sure where your items went?</h5>
              <div className='cartb'>
-             <div><Link to='/'><button className='cartbutt'>Continue Shopping</button></Link></div>
+             <div><Link to='/'><button className='cartbutt' id='cart'>Continue Shopping</button></Link></div>
              <div><Link to='/signin'><button className='sign'>Sign in</button></Link></div>
              </div>
             
