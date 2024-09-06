@@ -94,8 +94,8 @@
 }
 
 .dashtitle span {
-    margin-left: 200px;
-    margin-top: 5px;
+    margin-left: 300px;
+    margin-top: -10px;
     display: inline-block;
     font: normal normal normal 22px / 1 Nucleo;
     font-family: Nucleo;
@@ -129,6 +129,20 @@
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+.dropdown {
+    position: fixed;
+    padding-left: 0;
+    right: 0px;
+    top: 120px;
+    display: none; 
+    
+    z-index: 11111;
+    transition: all .15s ease;
+    max-width: 90%;
+    margin: 0;
+    line-height: 1.5;
+}
+
 
 .dash {
     border-top: 1px solid #efe6e6;
@@ -226,7 +240,7 @@ body {
     color: black;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .header {
         flex-direction: column;
         justify-content: space-around;
@@ -274,7 +288,7 @@ body {
         justify-content: space-around;
         font-size: 8px;
     }
-}
+} */
 
 .storedown {
     position: fixed;
@@ -303,6 +317,9 @@ body {
 
 .storedown.visible {
     display: block; 
+}
+.dropdown.visible{
+    display: block;
 }
 
 .storetitle {
@@ -408,6 +425,7 @@ body {
         width: 100px;
         height: 40px;
         margin-bottom: 10px;
+        left: 100px;
     }
 
     .store, .titlecls, .input1, .button {
@@ -424,14 +442,32 @@ body {
     .input1 {
         width: 80%;
     }
+    .input {
+        display: inline-block;
+        width: 500px;
+    }
+    
+    .input1 {
+        display: inline-block;
+        left: 170px;
+        position: relative;
+        background-color: #fff;
+        width: 80%;
+        padding: 12px 16px;
+        color: #333;
+        margin: 0;
+        border-radius: 8px;
+    }
 
     .titlecls {
         display: flex;
         justify-content: center;
+        
     }
 
     .title {
         align-items: center;
+        left: 120px;
     }
     .account-dropdown {
         display: none;
