@@ -34,3 +34,23 @@
     height: 300px;
 
 }
+@media (max-width: 768px) {
+    .offroom, .offimg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offroom div, .offimg div {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .offroom div img, .offimg div img {
+        width: 100%;
+        height: auto;
+    }
+
+    .butt {
+        width: 90%;
+    }
+}

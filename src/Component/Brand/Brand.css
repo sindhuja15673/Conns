@@ -115,6 +115,8 @@
 } */
 
 
+
+
 .brandcontent {
     max-width: 100%;
     display: flex;
@@ -168,4 +170,29 @@
 
 .prev2:hover, .next2:hover {
     background-color: rgba(70, 68, 68, 0.8);
+}
+
+@media (max-width: 1200px) {
+    .brand-item {
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-item {
+        flex: 0 0 calc(100% / 2);
+        max-width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    /* .brand-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    } */
+
+    /* .brandimg {
+        width: 60%;
+    } */
 }

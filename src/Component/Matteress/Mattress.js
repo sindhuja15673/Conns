@@ -6,7 +6,7 @@ import mat1 from "../../images/mat1.jpg";
 import mat2 from "../../images/mat2.jpg";
 
 
-const Offers = () => {
+const Mattress = () => {
     return (
         <div>
             <div className='of'>
@@ -40,4 +40,4 @@ const Offers = () => {
     );
 }
 
-export default Offers;
+export default Mattress;

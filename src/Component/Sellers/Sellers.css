@@ -59,10 +59,12 @@ hr {
 .app1{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .box{
     width: 250px;
     height: 500px;
+    margin-bottom: 20px;
 }
 .app1 img {
     position: relative;
@@ -93,4 +95,45 @@ hr {
 }
 .imgcontentts h2,h5{
     text-align: start !important;
+}
+
+@media (max-width: 768px) {
+    .sell {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .sell span {
+        display: block;
+        padding: 10px 0;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .app1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+    }
+
+    .app1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .imgcontent {
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .det {
+        position: static;
+        margin-left: 0;
+    }
 }

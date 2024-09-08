@@ -1,3 +1,8 @@
+body{
+    width: 100%;
+}
+
+
 .header {
     position: sticky;
     top: 0;
@@ -55,7 +60,7 @@
     background-color: transparent;
     position: absolute;
     margin-top: 10px;
-    left: 990px;
+    left: 900px;
 }
 
 .title1 a {
@@ -240,55 +245,6 @@ body {
     color: black;
 }
 
-/* @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        justify-content: space-around;
-        height: auto;
-        padding: 5px;
-    }
-
-    .titlecls {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .store {
-        display: none;
-    }
-
-    .store span {
-        margin-right: 5px;
-    }
-
-    .input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .title {
-        justify-content: space-between;
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .title div {
-        display: inline-block;
-        flex-direction: row;
-        margin-right: 10px;
-    }
-
-    .title1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: 8px;
-    }
-} */
 
 .storedown {
     position: fixed;
@@ -417,6 +373,7 @@ body {
     .header {
         flex-direction: column;
         align-items: center;
+        max-width: 100%;
         height: auto;
         padding: 10px;
     }

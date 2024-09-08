@@ -32,11 +32,11 @@ const Contact = () => {
                         <h5>By entering your email address and clicking the <strong>"Submit"</strong> button, you are consenting to recieve marketing email from Conn Appliances, Inc.</h5>
 
                         <br></br>
-                        <input placeholder='Enter your email address'></input><button onClick={handleClick}>Submit</button>
+                        <input placeholder='Enter your email address'></input><button className='emailbut' onClick={handleClick}>Submit</button>
                     </div>
                     <div className='phone'>
                         <h4><LuMessageSquare />Opt in for Conn's Text Club</h4>
-                        <input placeholder='Enter your mobile number'></input><button>Submit</button>
+                        <div><input placeholder='Enter your mobile number'></input><button className='phonebut'>Submit</button></div>
                         <br></br>
                         <h5 className='h5'>By entering your cell phone number above and clicking submit, you expressly consent to join Conns Text Club and to receive marketing and promotional offers from Conns via automated text/SMS message to the mobile number you text us from for products, services and financing offered by Conns HomePlus. Your consent is not a condition of purchase or financing. Message and data rates may apply. Messages are recurring.</h5>
                     </div>

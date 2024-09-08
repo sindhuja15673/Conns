@@ -134,3 +134,68 @@
     font-size: 34px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .productoff, .productlist, .producttype {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productoff {
+        margin-top: 10px;
+    }
+
+    .img1, .appliance {
+        width: 90%;
+        height: auto;
+    }
+
+    .product {
+        width: 90%;
+        margin: 10px 0;
+        height: auto;
+        padding: 10px;
+    }
+
+    .toppro {
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .title2 {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .producttype {
+        flex-direction: column;
+    }
+
+    .app {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .but {
+        margin: 20px auto;
+    }
+
+    .conns {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .details {
+        position: relative;
+        margin-left: 0;
+    }
+
+    .interest {
+        font-size: 24px;
+    }
+
+    .line {
+        font-size: 14px;
+    }
+}

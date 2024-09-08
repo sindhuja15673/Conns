@@ -9,7 +9,7 @@ import stay4 from "../../images/stay4.jpg";
 import stay5 from "../../images/stay5.jpg";
 import stay6 from "../../images/stay6.jpg";
 
-const Offers = () => {
+const Staycation = () => {
     return (
         <div>
             <br></br>
@@ -56,4 +56,4 @@ const Offers = () => {
     );
 }
 
-export default Offers;
+export default Staycation;

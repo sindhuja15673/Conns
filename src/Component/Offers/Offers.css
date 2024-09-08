@@ -1,34 +1,75 @@
+.offers {
+    padding: 20px;
+}
+
 .offroom{
     display: flex;
     justify-content: space-evenly;
-    max-width: 100%;
+    /* max-width: 100%; */
+    flex-wrap: wrap;
     margin-top: 30px;
 }
-.offroom div img{
+.offroom div {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}s
+/* .offroom div img{
     width: 96%;
     height: 300px;
     margin-left: 15px;
+} */
+
+.offroom div img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
 }
-.offroom h3,h5{
+/* .offroom h3,h5{
     color: rgb(59, 56, 56);
     text-align: center;
 }
 .offimg h3,h5{
     color: rgb(59, 56, 56);
     
+} */
+.offroom h3, .offroom h5 {
+    color: rgb(59, 56, 56);
 }
 
 .offimg{
     display: flex;
     justify-content: space-evenly;
-
-    max-width: 100%;
+    flex-wrap: wrap;
+    
 }
 .offimg div img{
     width: 100%;
     height: 300px;
-
+    max-width: 100%;
 }
-#butt{
+.offimg h3 {
+    color: rgb(59, 56, 56);
+}
+/* #butt{
     margin-left: 600px;
+} */
+
+@media (max-width: 768px) {
+    .offroom, .offimg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offroom div, .offimg div {
+        width: 100%;
+    }
+
+    .offroom div img, .offimg div img {
+        width: 90%;
+    }
+
+    .offroom h3, .offroom h5, .offimg h3 {
+        text-align: center;
+    }
 }
