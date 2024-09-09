@@ -83,3 +83,52 @@
 .teleimg button:focus{
     background-color:#D10A24;
 }
+@media (max-width: 768px) {
+    .television {
+        display: block;
+    }
+
+    .tel {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .tel1 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .telimg {
+        display: block;
+        text-align: center;
+    }
+
+    .telimg div {
+        margin-bottom: 20px;
+    }
+
+    .telecart {
+        display: block;
+        text-align: center;
+    }
+
+    .teleimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .teleimg img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .telecontent{
+        text-align: center;
+        font-size: 16px;
+    }
+    .teleimg button {
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+}

@@ -126,3 +126,55 @@
 .tvlist h3{
     color: rgb(53, 51, 51);
 }
+@media (max-width: 768px) {
+    .tvimg {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .tvimg1,
+    .tvimg2 {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .tvimg1 img,
+    .tvimg2 {
+        height: auto;
+    }
+
+    .tvsimg2 {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .tvsimg2 div {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .tvsimg2 img {
+        width: 100%;
+    }
+
+    .tvss {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tvbut1 {
+        margin-left: 0;
+    }
+
+    .tv3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .abut1 {
+        width: 100%;
+    }
+}
