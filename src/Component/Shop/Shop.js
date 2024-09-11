@@ -5,7 +5,7 @@ import shop1 from "../../images/shop1.jpg";
 import shop2 from "../../images/shop2.jpg";
 
 
-const Offers = () => {
+const Shop = () => {
     return (
         <div>
             <div className='of'>
@@ -35,4 +35,4 @@ const Offers = () => {
     );
 }
 
-export default Offers;
+export default Shop;

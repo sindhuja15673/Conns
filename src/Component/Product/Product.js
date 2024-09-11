@@ -45,7 +45,7 @@ const Product = () => {
                 <div className='title2'><span className='color'><strong>Love it Today,</strong><span className='red'><strong>Get it Fast</strong></span></span></div>
                 <div className='producttype'>
                     <div className='app'>
-                        <a><img className='appliance' src={fridge}></img></a>
+                        <a><img className='appliance' src={fridge}></img></a><br></br>
                         <span>Appliances</span>
                     </div>
                     <div className='app'>

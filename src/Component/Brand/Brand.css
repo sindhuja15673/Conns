@@ -180,19 +180,23 @@
 }
 
 @media (max-width: 768px) {
+    body{
+
+        max-width: 768px;
+    }
     .brand-item {
         flex: 0 0 calc(100% / 2);
         max-width: calc(100% / 2);
     }
 }
 
-@media (max-width: 768px) {
-    /* .brand-item {
+/* @media (max-width: 768px) {
+    .brand-item {
         flex: 0 0 100%;
         max-width: 100%;
-    } */
+    }
 
-    /* .brandimg {
+    .brandimg {
         width: 60%;
-    } */
-}
+    }
+} */

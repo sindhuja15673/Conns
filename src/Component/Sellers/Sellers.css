@@ -98,6 +98,10 @@ hr {
 }
 
 @media (max-width: 768px) {
+    .sel{
+        width: 768px;
+        margin-left: 400px;
+    }
     .sell {
         margin-left: 0;
         text-align: center;
@@ -122,6 +126,9 @@ hr {
         height: auto;
     }
 
+    .app1{
+        margin-left: 130px;
+    }
     .app1 img {
         width: 100%;
         height: auto;

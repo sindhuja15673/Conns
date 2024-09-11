@@ -56,7 +56,17 @@
 } */
 
 @media (max-width: 768px) {
+    
+    .of h1{
+        margin-left: 60px;
+        
+    }
+    .of{
+        margin-left: 5px;
+    }
     .offroom, .offimg {
+        margin-left: 400px;
+        width: 768px;
         flex-direction: column;
         align-items: center;
     }
@@ -66,7 +76,7 @@
     }
 
     .offroom div img, .offimg div img {
-        width: 90%;
+        width: 100%;
     }
 
     .offroom h3, .offroom h5, .offimg h3 {
