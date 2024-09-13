@@ -181,7 +181,7 @@
 
 .promo {
     width: 97.8%;
-    height: auto;
+    height: 300px;
     margin-left: 26px;
     background-color: #f0ede8;
     border-radius: 5px;
@@ -189,6 +189,7 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    font-size:22px;
     justify-content: space-between;
 }
 
@@ -203,7 +204,7 @@
     display: inline-block;
     background-color: black;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 10px;
     cursor: pointer;
     border: none;
@@ -211,11 +212,13 @@
 }
 
 .butt1 {
-    width: 250px;
+    width: 300px;
 }
 
 .butt {
-    width: 200px;
+    width: 300px;
+    margin-left: 350px;
+    margin-top: -40px;
 }
 
 .butt1:hover, .butt:hover {
@@ -287,11 +290,16 @@
     }
 
     .sam {
-        width: 150px;
-        height: 120px;
+        display: none;
+        /* width: 150px;
+        height: 120px; */
     }
 
-    .butt, .butt1 {
+    .butt{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .butt1{
         width: 100%;
         margin: 10px 0;
     }

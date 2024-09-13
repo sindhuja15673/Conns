@@ -17,16 +17,16 @@ const Sellers = () => {
                 <span>Computers</span>
                 <span>Mattresses & Bedding</span>
             </div>
-            <hr></hr>
+            <hr className='hrs'></hr>
             <div className='app1'>
                 <div className='box'>
                     <div><img src={dryer}></img>
                         <div><a className='det'>Sale</a></div>
                     </div>
                     <div className='imgcontentts'>
-                        <h5>klhyrertyiiygyt</h5>
+                        <h5>Dryer</h5>
                         <h2>$99.99</h2>
-                        <h5>oitytutyhihuijii</h5>
+                        <h5>Dryer</h5>
                     </div>
                 </div>
                 <div className='box'>
@@ -34,9 +34,9 @@ const Sellers = () => {
                     <div><a className='det'>Sale</a></div>
                     </div>
                     <div className='imgcontent'>
-                        <h5>klhyrertyiiygyt</h5>
+                        <h5>Refrigerator</h5>
                         <h2>$99.99</h2>
-                        <h5>oitytutyhihuijii</h5>
+                        <h5>LG Refrigerator</h5>
                     </div>
                 </div>
                 <div className='box'>
@@ -44,16 +44,16 @@ const Sellers = () => {
                     <div><a className='det'>Sale</a></div>
                     </div>
                     <div className='imgcontent'>
-                        <h5>klhyrertyiiygyt</h5>
+                        <h5>Refrigerator</h5>
                         <h2>$99.99</h2>
-                        <h5>oitytutyhihuijii</h5>
+                        <h5>Samsung Refrigerator</h5>
                     </div>
                 </div>
                 <div className='box'>
                     <div><img src={lg2}></img>
                     <div><a className='det'>Sale</a></div></div>
                     <div className='imgcontent'>
-                        <h5>klhyrertyiiygyt</h5>
+                        <h5>Refrigerator</h5>
                         <h2>$99.99</h2>
                         <h5>oitytutyhihuijii</h5>
                     </div>

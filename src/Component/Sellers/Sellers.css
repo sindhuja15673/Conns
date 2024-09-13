@@ -12,7 +12,7 @@
 }
 .sell {
     margin-bottom: 20px;
-    margin-left: 180px;
+    margin-left: 580px;
      
 }
 
@@ -25,11 +25,12 @@
     
 }
 
-hr {
+.hrs {
     width: 850px;
     border: 0;
     border-top: 1px solid white;
     transition: border-color 0.3s;
+    margin-left: 585px;
 }
 
 .app1 {

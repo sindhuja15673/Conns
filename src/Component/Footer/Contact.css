@@ -1,8 +1,8 @@
 .contactdet{
     width: 100%;
-    
+    font-size: 22px;
     background-color: #f0ede8;
-    height: 270px;
+    height: 370px;
     display: flex;
     justify-content: space-between;
 }
@@ -34,7 +34,7 @@
 .email button{
     display: inline-block;
     margin-top: -29px;
-    margin-left: 480px;
+    margin-left: 700px;
     width: 110px;
     padding: 5px 0px;
     
@@ -76,27 +76,33 @@
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
     color: #5f5f69;
     display: block;
     margin: 0 0 0;
     
 }
+.email h5{
+    font-size: 18px;
+}
 .phone input{
 
     display: block;
     width: 75%;
     border-radius: 0px;
-    height: 23px;
+    height: 35px;
     margin-top: 30px;
-
+    font-size: 18px;
 }
-
+.email input{
+    height: 35px;
+    font-size: 18px;
+}
 .phone button{
     display: inline-block;
-    margin-top: -29px;
-    margin-left: 480px;
+    
+    margin-left: 700px;
     
     width: 110px;
     padding: 5px 0px;
@@ -104,6 +110,7 @@
     color: #fff;
 
 }
+
 .opt{
     margin-top: 10px;
     text-align: center;
@@ -232,10 +239,25 @@
 }
 .hr{
     
-    width: 98%;
+    width: 100%;
     border: 0;
     border-top: 1px solid rgb(36, 31, 31);
     transition: border-color 0.3s;
+}
+@media (max-width: 768px){
+    .email{
+        font-size: 12px;
+
+    }
+    .phone{
+        font-size: 12px;
+    }
+    .email h5 {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 991px) {
     .footer p {

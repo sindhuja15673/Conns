@@ -56,7 +56,9 @@
 } */
 
 @media (max-width: 768px) {
-    
+    body{
+        width: 768px;
+    }
     .of h1{
         margin-left: 60px;
         
