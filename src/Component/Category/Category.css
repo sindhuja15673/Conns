@@ -181,7 +181,7 @@
 
 .promo {
     width: 97.8%;
-    height: 300px;
+    height: auto;
     margin-left: 26px;
     background-color: #f0ede8;
     border-radius: 5px;
@@ -189,7 +189,7 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    font-size:22px;
+    
     justify-content: space-between;
 }
 
@@ -204,7 +204,7 @@
     display: inline-block;
     background-color: black;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
     cursor: pointer;
     border: none;
@@ -212,13 +212,12 @@
 }
 
 .butt1 {
-    width: 300px;
+    width: 250px;
 }
 
 .butt {
-    width: 300px;
-    margin-left: 350px;
-    margin-top: -40px;
+    width: 200px;
+    
 }
 
 .butt1:hover, .butt:hover {
@@ -256,9 +255,9 @@
         width: 768px;
     }
     .categ{
-        width: 700px;
-        height: 1200px;
-        margin-left: 430px;
+        width: 820px;
+        height: 1000px;
+        margin-left: 590px;
     }
     .category {
         flex-wrap: wrap;
@@ -277,10 +276,10 @@
     }
 
     .promo {
-        width: 700px;
+        width: 820px;
         flex-direction: column;
         align-items: center;
-        margin-left: 430px;
+        margin-left: 590px;
     }
 
     .samimg1 {
@@ -298,10 +297,13 @@
     .butt{
         width: 100%;
         margin: 10px 0;
+        margin-left: 30px;
+        
     }
     .butt1{
-        width: 100%;
+        width: 90%;
         margin: 10px 0;
+        margin-left: 30px;
     }
 
     .conpro {

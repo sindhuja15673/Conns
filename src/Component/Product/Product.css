@@ -6,8 +6,8 @@
     margin-top: 20px;
 }
 .img1{
-    width: 630px;
-    height: 350px;
+    width: 430px;
+    height: 250px;
     padding: 3px;
     border-radius: 3px;
 }
@@ -29,8 +29,8 @@
 }
 .product{
     background-color: #f0ede8;
-    width: 630px;
-    height: 350px;
+    width: 430px;
+    height: 250px;
     margin-top: 20px;
     
     border-radius: 5px;
@@ -45,12 +45,12 @@
 
     text-decoration: underline;
     color: black !important;
-    margin-top: 250px;
-    margin-left: 500px;
+    margin-top: 150px;
+    margin-left: 300px;
 }
 .color{
     color: black;
-    font-size: 22px;
+    
 }
 .title2{
     margin-top: 25px;
@@ -60,8 +60,8 @@
 .red{
     display: inline-block;
     width: fit-content;
-    font-size: 22px;
-    height: 40px;
+    
+    height: 20px;
     background-color: #DF0542;
     color: #FFFFFF;
     padding: 2px 6px;
@@ -71,19 +71,17 @@
     justify-content: space-around;
 }
 .appliance{
-    width: 120px;
-    height: 120px;
+    width: 73px;
+    height: 73px;
     vertical-align: middle;
     border-radius: 50%;
 }
-.app{
-    font-size: 22px;
-}
+
 .producttype span{
    margin-left: 20px;
 }
 .sub{
-    font-size:18px;
+    font-size:12px;
 }
 .appliance:hover{
     /* border:1px solid #868282; */
@@ -94,25 +92,25 @@
     display: inline-block;
     margin-right: 300px;
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 18px;
 }
 .line{
-    font-size: 18px;
+    font-size: 13px;
 }
 .but{
     background-color: black;
     color: #fff;
-    margin-left: 230px;
+    margin-left: 130px;
     margin-top: 10px;
     font-size: 18px;
     width: fit-content;
-    text-align: center;
+    
     padding: 16px 26px;
 }
 .conns{
     display: inline-block;
-    margin-top: 30px;
-    margin-left: 170px;
+    margin-top: 70px;
+    margin-left: 18px;
     font-size: 22px;
     text-align: center;
 }
@@ -135,7 +133,7 @@
 }
 .interest{
     margin-top: 20px;
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
 }
 
@@ -143,7 +141,7 @@
     .productoff, .productlist{
         flex-direction: column;
         align-items: center;
-        margin-left: 300px;
+        margin-left: 500px;
     }
     .producttype{
         

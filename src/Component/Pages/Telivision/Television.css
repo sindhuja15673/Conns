@@ -86,11 +86,15 @@
 @media (max-width: 768px) {
     .television {
         display: block;
+        width: 820px;
+        margin-left: 520px;
+
+        margin-top: 50px;
     }
 
     .tel {
         width: 100%;
-        margin-left: 0;
+        
     }
 
     .tel1 {
@@ -99,7 +103,7 @@
     }
 
     .telimg {
-        display: block;
+        
         text-align: center;
     }
 

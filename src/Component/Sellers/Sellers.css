@@ -12,7 +12,7 @@
 }
 .sell {
     margin-bottom: 20px;
-    margin-left: 580px;
+    margin-left: 180px;
      
 }
 
@@ -30,7 +30,7 @@
     border: 0;
     border-top: 1px solid white;
     transition: border-color 0.3s;
-    margin-left: 585px;
+    /* margin-left: 585px; */
 }
 
 .app1 {
@@ -100,8 +100,8 @@
 
 @media (max-width: 768px) {
     .sel{
-        width: 768px;
-        margin-left: 400px;
+        width: 820px;
+        margin-left: 590px;
     }
     .sell {
         margin-left: 0;

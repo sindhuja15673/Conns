@@ -25,7 +25,6 @@ const Cart = () => {
              <div><Link to='/'><button className='cartbutt' id='cart'>Continue Shopping</button></Link></div>
              <div><Link to='/signin'><button className='sign'>Sign in</button></Link></div>
              </div>
-            
              </div>
          </div>
             ) : (

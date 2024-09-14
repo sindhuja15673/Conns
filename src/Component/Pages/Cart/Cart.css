@@ -150,26 +150,35 @@ body{
 
 @media (max-width: 768px) {
     .carts {
-        width: fit-content;
+        width: 650px;
+        margin-left: -680px;
+
     }
 
     .cart {
-        width: 100%;
+        width: 820px;
+        margin-left: 590px;
         padding: 20px;
     }
 
-    .cart h5 {
+    .carts h5 {
         text-align: center;
-        font-size: 16px;
-        margin-right: 340px;
+        margin-left: 220px;
+        
         
     }
-    .cart h2 {
+    .carts h2 {
         text-align: center;
-        font-size: 16px;
-        margin-right: 10px;
+        
+        
     }
-
+    .cartb{
+        margin-left: -60px;
+    }
+    .cart2{
+        left: 500px;
+        width: 820px;
+    }
     #cart {
         /* margin-left: 0; */
         padding: 12px 16px;
@@ -185,7 +194,7 @@ body{
     .cart-items{
         width: fit-content;
         text-align: center;
-        margin-left: 600px;
+        margin-left: 120px;
     }
     .cart-item {
         flex-direction: column;

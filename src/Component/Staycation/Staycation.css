@@ -41,6 +41,8 @@
     .offroom, .offimg1 {
         flex-direction: column;
         align-items: center;
+        width: 800px;
+        margin-left: 590px;
     }
 
     .offroom div, .offimg1 div {
@@ -49,8 +51,8 @@
     }
 
     .summer{
-        width: 768px;
-        margin-left: 400px;
+        width: 820px;
+        margin-left: 590px;
     }
     .offroom div img, .offimg1 div img {
         width: 100%;
