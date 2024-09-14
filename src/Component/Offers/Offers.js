@@ -14,7 +14,6 @@ const Offers = () => {
                 <div className='offroom'>
                         <div><img src={room1}></img>
                     <br></br>
-
                     <h3>Save Up to $500 on Samsung Appliance Packages</h3>
                     <h5>Buy 2=EXTRA $100 Off, Buy 3=EXTRA $250 Off Or Buy 4= $500 Off</h5>
                     </div>

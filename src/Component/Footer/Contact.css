@@ -242,11 +242,18 @@
 @media (max-width: 768px){
     .email{
         font-size: 12px;
+    
 
+    }
+    .emailbut{
+        display: none !important;
+    }
+    .phonebut{
+        display: none !important;
     }
     .contact{
         width: 820px;
-        margin-left: 590px;
+        margin-left: 910px;
     }
     .contactdet{
         height: 350px;
