@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 const Product = () => {
     return (
-        <div>
+        <div className='prs'>
             <div className='productoff'>
 
             <div className='offer'>

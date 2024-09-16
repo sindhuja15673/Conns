@@ -377,7 +377,7 @@ body {
 
     
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body{
         max-width: 100%;
         width: 100%;
@@ -395,7 +395,7 @@ body {
         width: 100px;
         height: 40px;
         margin-bottom: 10px;
-        left: 220px;
+        left: 370px;
     }
 
     .store, .titlecls, .input1, .button {
@@ -419,7 +419,7 @@ body {
     
     .input1 {
         display: inline-block;
-        left: 270px;
+        left: 420px;
         position: relative;
         background-color: #fff;
         width: 80%;
@@ -437,7 +437,7 @@ body {
 
     .title {
         align-items: center;
-        left: 220px;
+        left: 370px;
     }
     .account-dropdown {
         display: none;

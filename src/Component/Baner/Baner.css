@@ -143,20 +143,20 @@
 .slide-out-right {
     animation: slideOutToRight 0.5s forwards;
 }
-@media (max-width: 768px){
+@media (max-width: 600px){
     body{
-        width: 100%;
+        width: 600px;
     }
     .baner{
-        max-width: 100%;
+        width: 90%;
         height: 500px;
-        margin-left: 690px;
+        margin-left: 580px;
     }
     .slideshow {
         display: inline-block;
         position: relative;
-        width: 1300px;
-        left: 110px;
+        width: 1200px;
+        left: 100px;
         height: 500px;
         overflow: hidden;
         
@@ -168,7 +168,7 @@
     .img {
         margin-top: 30px;
         margin-left: 1px;
-        width: 100%;
+        width: 115%;
         height: 100%;
         vertical-align: middle;
     }
