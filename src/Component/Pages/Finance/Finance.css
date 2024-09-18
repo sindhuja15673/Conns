@@ -100,13 +100,16 @@
 .fimg1{
     display: inline-block;
     width: 50%;
-    height: 300px ;
+    
     margin-left: 60px;
+}
+.fimg1 img{
+    height: 300px;
 }
 .fimg2{
     display: inline-block;
     width: 50%;
-    height: 200px;
+    height: 300px;
     background-color: #d1d1d4;
     margin-right: 50px;
     padding: 20px;

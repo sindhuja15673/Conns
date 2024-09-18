@@ -10,7 +10,7 @@ import logo from "../../images/logo.webp";
 import fb from "../../images/fb.webp";
 import yt from "../../images/yt.webp";
 import insta from "../../images/insta.webp";
-import twitter from "../../images/insta.webp";
+import twitter from "../../images/twitter.webp";
 import fb1 from "../../images/fb1.webp";
 import pinterest from "../../images/pinterest.webp";
 import insta1 from "../../images/insta1.webp";
