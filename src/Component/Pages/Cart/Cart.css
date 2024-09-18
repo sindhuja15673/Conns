@@ -132,9 +132,9 @@ body{
    gap: 10px;
 }
 .remove{
-    margin-top: 130px;
+    margin-top: 80px;
     width: 200px;
-    margin-left: -200px;
+    margin-left: 300px;
 }
 .remove button{
     text-align: center;
@@ -195,7 +195,7 @@ body{
     .cart-items{
         width: fit-content;
         text-align: center;
-        margin-left: 120px;
+        margin-left: 400px;
     }
     .cart-item {
         flex-direction: column;
@@ -221,9 +221,9 @@ body{
 
     }
 
-    .remove button {
+    .remove {
         width: 100%;
         text-align: center;
-        margin-left: 300px;
+        margin-left: 5px;
     }
 }
