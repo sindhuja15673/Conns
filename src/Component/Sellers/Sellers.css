@@ -1,6 +1,7 @@
 .sel {
     background-color: #f0ede8 ;
     width: 97.8%;
+    height: 550px;
     margin-left: 25px;
     text-align: center;
     border-radius: 3px;
@@ -11,7 +12,7 @@
     margin-top: 20px;
 }
 .sell {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     margin-left: 180px;
      
 }
@@ -30,12 +31,13 @@
     border: 0;
     border-top: 1px solid white;
     transition: border-color 0.3s;
-    /* margin-left: 585px; */
+    margin-left: 180px;
 }
 
 .app1 {
     width: 97.8%;
     margin-top: 30px;
+    margin-left: 40px;
 }
 
 .app1 div {
@@ -100,8 +102,10 @@
 
 @media (max-width: 768px) {
     .sel{
-        width: 820px;
-        margin-left: 910px;
+        display: block;
+        width: 950px;
+        margin-left: 840px;
+        height: fit-content;
     }
     .sell {
         margin-left: 0;
@@ -120,6 +124,7 @@
     .app1 {
         flex-direction: column;
         align-items: center;
+        
     }
 
     .box {

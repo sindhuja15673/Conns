@@ -138,10 +138,13 @@
 }
 
 @media (max-width: 768px) {
+    .prs{
+        display: block;
+    }
     .productoff, .productlist{
         flex-direction: column;
         align-items: center;
-        margin-left: 690px;
+        margin-left: 820px;
     }
     .producttype{
         
@@ -153,13 +156,14 @@
     }
     .product{
         padding-left: 10px;
+        height: fit-content;
     }
     .productlist{
 
         margin-right: 50px;
     }
     .app img{
-        width: 100px;
+        width: 120px;
     }
     .productoff {
         margin-top: 10px;
@@ -169,8 +173,13 @@
         width: 90%;
         height: auto;
     }
-    
-
+    .img1{
+        width: 900px;
+    }
+    .product{
+        width: 880px;
+        margin-left: 40px;
+    }
     .title2 {
         margin-right: 0;
         text-align: center;

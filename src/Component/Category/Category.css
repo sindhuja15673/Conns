@@ -212,12 +212,13 @@
 }
 
 .butt1 {
-    width: 250px;
+    width: 270px;
 }
 
 .butt {
-    width: 200px;
-    
+    width: 270px;
+    margin-left: 350px;
+    margin-top: -40px;
 }
 
 .butt1:hover, .butt:hover {
@@ -251,13 +252,12 @@
 /* Mobile View */
 @media (max-width: 768px) {
 
-    body{
-        width: 768px;
-    }
+    
     .categ{
-        width: 820px;
-        height: 1000px;
-        margin-left: 910px;
+        display: block;
+        width: 1020px;
+        height: 700px;
+        margin-left: 810px;
     }
     .category {
         flex-wrap: wrap;
@@ -276,10 +276,10 @@
     }
 
     .promo {
-        width: 820px;
+        width: 1020px;
         flex-direction: column;
         align-items: center;
-        margin-left: 910px;
+        margin-left: 810px;
     }
 
     .samimg1 {

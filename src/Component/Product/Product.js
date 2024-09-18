@@ -49,15 +49,15 @@ const Product = () => {
                         <span>Appliances</span>
                     </div>
                     <div className='app'>
-                        <a><Link to='/sofa'><img className='appliance' src={sofa}></img></Link></a>
+                        <a><Link to='/sofa'><img className='appliance' src={sofa}></img></Link></a><br></br>
                         <span>Furnitures</span>
                     </div>
                     <div className='app'>
-                        <a><Link to='/television'><img className='appliance' src={tvs}></img></Link></a>
+                        <a><Link to='/television'><img className='appliance' src={tvs}></img></Link></a><br></br>
                         <span>TVs</span>
                     </div>
                     <div className='app'>
-                        <a><Link to='/matress2'><img className='appliance' src={matress}></img></Link></a>
+                        <a><Link to='/matress2'><img className='appliance' src={matress}></img></Link></a><br></br>
                         <span>Mattresses</span>
                     </div>
                 </div>

@@ -150,8 +150,9 @@ body{
 
 @media (max-width: 768px) {
     .carts {
-        width: 650px;
-        margin-left: -680px;
+        display: block;
+        width: 1020px;
+        margin-left: -500px;
 
     }
 

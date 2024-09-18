@@ -252,8 +252,9 @@
         display: none !important;
     }
     .contact{
-        width: 820px;
-        margin-left: 910px;
+        display: block;
+        width: 1020px;
+        margin-left: 810px;
     }
     .contactdet{
         height: 350px;

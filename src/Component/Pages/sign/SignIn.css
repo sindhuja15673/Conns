@@ -38,6 +38,7 @@
     border: 1px solid rgb(148, 140, 140);
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
+    margin-bottom: 100px;
   }
   
   .formss {
@@ -89,7 +90,7 @@
   
   
   .button1 {
-    margin-top: 200px;
+    margin-top: 50px;
     
     color: #000;
     font-weight: 600;
@@ -109,4 +110,8 @@
     background: black;
   }
   
-  
+  @media (max-width: 768px){
+    .login1 {
+      margin-left: 1050px;
+    }
+  }

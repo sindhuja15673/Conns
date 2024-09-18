@@ -13,18 +13,18 @@
     flex: 1;
     margin: 10px;
     text-align: center;
-}s
+}
 /* .offroom div img{
     width: 96%;
     height: 300px;
     margin-left: 15px;
 } */
 
-.offroom div img {
+/* .offroom div img {
     width: 100%;
     height: auto;
     max-width: 300px;
-}
+} */
 /* .offroom h3,h5{
     color: rgb(59, 56, 56);
     text-align: center;
@@ -35,8 +35,12 @@
 } */
 .offroom h3, .offroom h5 {
     color: rgb(59, 56, 56);
+    text-align: center;
 }
-
+.h5{
+    text-align: center;
+    margin-left: 110px;
+}
 .offimg{
     display: flex;
     justify-content: space-evenly;
@@ -56,14 +60,13 @@
 } */
 
 @media (max-width: 768px) {
-    body{
-        width: 768px;
-    }
+    
     .of h1{
         margin-left: 600px;
         
     }
     .of{
+        display: block;
         margin-left: 5px;
     }
     

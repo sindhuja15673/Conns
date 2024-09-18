@@ -51,6 +51,7 @@ const Offers = () => {
                     
                 </div>
                 <button className='butt' id='butt'>Shop Electronics <IoIosArrowForward /></button>
+                <br></br>
             </div>
         </div>
     );

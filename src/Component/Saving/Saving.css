@@ -20,6 +20,7 @@
     color: rgb(59, 56, 56);
     
 }
+
 .offimg h3,h5{
     text-align: center;
 }
@@ -34,13 +35,15 @@
     height: 300px;
 
 }
+#butt{
+    margin-top: 20px;
+    margin-left: 500px;
+}
 @media (max-width: 768px) {
-    body{
-        width: 768px;
-    }
+    
     .offroom, .offimg {
-        margin-left: 910px;
-        width: 820px;
+        margin-left: 820px;
+        width: 990px;
         flex-direction: column;
         align-items: center;
     }
@@ -49,7 +52,6 @@
         width: 100%;
         margin-bottom: 20px;
     }
-
     .offroom div img, .offimg div img {
         width: 100%;
         height: auto;
@@ -57,5 +59,10 @@
 
     .butt {
         width: 90%;
+
+    }
+    #butt{
+        margin-left: 830px;
+        width: 960px;
     }
 }

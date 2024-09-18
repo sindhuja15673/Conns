@@ -87,8 +87,9 @@ const SignIn = () => {
                     <input type='password' name='password' value={password} onChange={handleChange}></input>
                     <label >Password:</label>
                 </div>
-                <button className='button1' type='submited'  >SignIn</button>
+                <button className='button1' type='submited' onClick={handleClick} >SignIn</button>
             </form>
+            
         </div>
         </div>
     );
