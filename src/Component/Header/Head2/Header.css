@@ -3,6 +3,15 @@ body{
     
 }
 
+.voice-button {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    left: 850px;
+    margin-top: 10px;
+}
 
 .header {
     position: sticky;
@@ -66,8 +75,8 @@ body{
     background-color: transparent;
     position: absolute;
     margin-top: 10px;
-    
-    left: 900px;
+    font-size: 1rem;
+    left: 890px;
 }
 
 .title1 a {
@@ -80,6 +89,7 @@ body{
 }
 .titlecls {
     display: flex;
+
     gap: 20px;
     justify-content: space-evenly;
 }
@@ -428,7 +438,12 @@ body {
         margin: 0;
         border-radius: 8px;
     }
-
+    .voice-button {
+        position: absolute;
+        
+        left: 1340px;
+        margin-top: 10px;
+    }
     .titlecls {
         display: flex;
         justify-content: center;

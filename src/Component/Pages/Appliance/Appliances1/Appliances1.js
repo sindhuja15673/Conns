@@ -1,6 +1,8 @@
 
 import React, { useContext } from 'react';
 import "../../Telivision/Television.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../../../../saga/action/cartActions';
 import product1 from "../../../../images/dishwasher.webp";
 import product2 from "../../../../images/GTD.jpg";
 import product3 from "../../../../images/refridge.jpg";
@@ -11,11 +13,13 @@ import product7 from "../../../../images/RF2.jpg";
 import { CartContext } from '../../../../Contexts/CartContext';
 
 const Appliances1 = () => {
-    const { addToCart } = useContext(CartContext);
+    // const { addToCart } = useContext(CartContext);
+    const dispatch = useDispatch();
 
     const handleAddToCart = (product) => {
-        alert('Product is added to cart')
-        addToCart(product);
+        dispatch(addToCart(product));
+        // alert('Product is added to cart')
+        // addToCart(product);
     };
 
     const products = [

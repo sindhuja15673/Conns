@@ -15,8 +15,9 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { TbMessageCircle } from "react-icons/tb";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { HiMiniMicrophone } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';  // Import useSelector to access the Redux state
+import { useSelector } from 'react-redux';
 
 const Header = () => {
     const [storeDropdownVisible, setStoreDropdownVisible] = useState(false);
@@ -28,6 +29,12 @@ const Header = () => {
 
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState('');
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
 
     const toggleStoreDropdown = () => {
         setStoreDropdownVisible(!storeDropdownVisible);
@@ -67,7 +74,7 @@ const Header = () => {
         laptop:'/laptop',
         furniture:'/sofa',
         sofa:'/sofa',
-        matress:'/matress2',
+        mattress:'/matress2',
         bed:'/matress2',
         patio:'/patio',
         outdoor:'/patio',
@@ -86,9 +93,28 @@ const Header = () => {
         }
     };
 
+    const startVoiceRecognition = () => {
+        recognition.start();
+    };
+
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        setSearchQuery(transcript);
+        const matchedRoute = Object.keys(searchRoutes).find(key => transcript.includes(key));
+        if (matchedRoute) {
+            navigate(searchRoutes[matchedRoute]);
+        } else {
+            alert('No results found');
+        }
+    };
+
+    recognition.onerror = (event) => {
+        console.error('Speech recognition error:', event.error);
+    };
+
     return (
         <div className='header'>
-           <Link to='/'> <div className='logo' ></div></Link>
+            <Link to='/'> <div className='logo'></div></Link>
             <div className='store' ref={storeDropdownRef}>
                 <div>
                     <span className='img'><GrLocation /></span>
@@ -154,8 +180,10 @@ const Header = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
+                <button className='voice-button' type='button' onClick={startVoiceRecognition}><HiMiniMicrophone /></button>
                 <button className='button' type='submit'><IoSearch /></button>
             </form>
+            
             <div className='titlecls'>
                 <div className='title'>
                     <BiDollarCircle /><br></br>
@@ -193,9 +221,12 @@ const Header = () => {
                     <span className='title1'><Link to="/cart">Cart</Link></span>
                     {cart.length > 0 && <span className='cart-count'>{cart.length}</span>}
                 </div>
+            
             </div>
         </div>
     );
 };
 
 export default Header;
+
+

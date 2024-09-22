@@ -1,5 +1,7 @@
 import React,{useContext} from 'react';
 import "../../Telivision/Television.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../../../../saga/action/cartActions';
 import patio6 from "../../../../images/patio6.jpg";
 import patio1 from "../../../../images/patio1.webp";
 import patio2 from "../../../../images/patio2.webp";
@@ -10,11 +12,10 @@ import { CartContext } from '../../../../Contexts/CartContext';
 
 
 const Patio = () => {
-    const { addToCart } = useContext(CartContext);
+    const dispatch = useDispatch();
 
     const handleAddToCart = (product) => {
-        alert('Product is added to Cart')
-        addToCart(product);
+        dispatch(addToCart(product));
     };
 
     const products = [
