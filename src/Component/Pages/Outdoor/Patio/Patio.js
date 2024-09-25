@@ -1,32 +1,63 @@
-import React,{useContext} from 'react';
+import React,{useState, useEffect} from 'react';
 import "../../Telivision/Television.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../../saga/action/cartActions';
-import patio6 from "../../../../images/patio6.jpg";
-import patio1 from "../../../../images/patio1.webp";
-import patio2 from "../../../../images/patio2.webp";
-import patio3 from "../../../../images/patio3.webp";
-import patio4 from "../../../../images/patio4.webp";
-import patio5 from "../../../../images/patio5.jpg";
-import { CartContext } from '../../../../Contexts/CartContext';
-
+import data from '../../../../products.json';
+import Rating from '../../../Rating';
 
 const Patio = () => {
     const dispatch = useDispatch();
+    const [patio, setPatio] = useState([]);
+    const [filterName, setFilterName] = useState("");
+    const [minPrice, setMinPrice] = useState("");
+    const [maxPrice, setMaxPrice] = useState("");
 
+
+    useEffect(() => {
+        console.log("Data loaded:", data);
+        const patioCategory = data.products.find(product => product.category === "Patio");
+        if (patioCategory) {
+
+            console.log("Television category found:", patioCategory);
+            const updatedPatio = patioCategory.items.map(item => ({
+                ...item,
+                averageRating: item.averageRating || 0,
+                ratingsCount: item.ratingsCount || 0,
+              }));
+          setPatio(updatedPatio);
+        }
+        else {
+            console.log("No television category found");
+        }
+      }, []);
+
+      const handleRateProduct = (index, newRating) => {
+        const updatedPatio = [...patio];
+        const product = updatedPatio[index];
+        product.averageRating = ((product.averageRating * product.ratingsCount) + newRating) / (product.ratingsCount + 1);
+        product.ratingsCount += 1;
+
+        setPatio(updatedPatio);
+        
+    };
+
+    
+    const getImagePath = (img) => {
+        return require(`../../../../images/${img}`);
+    };
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
     };
 
-    const products = [
-        { img: patio1, name: 'La Palma 5-pc Patio Set', price: '$1,999' },
-        { img: patio2, name: 'La Palma Sectional Set', price: '$5,999' },
-        { img: patio3, name: 'La Palma Table', price: '$4,999' },
-        { img: patio4, name: 'La Palma Chair', price: '$2,799' },
-        { img: patio5, name: 'Marquesa Table ', price: '$2,799' },
-        { img: patio6, name: 'Tan 9 FT Round Umbrella with Crank and Tilt Function and Standing Umbrella Base', price: '$3,299' }
-        
-    ];
+    const filteredPatio = patio.filter(product => {
+        const matchesName = product.name.toLowerCase().includes(filterName.toLowerCase());
+        const matchesMinPrice = minPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) >= parseFloat(minPrice);
+        const matchesMaxPrice = maxPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) <= parseFloat(maxPrice);
+        return matchesName && matchesMinPrice && matchesMaxPrice;
+       
+    });
+
+
     return (
         <div className='television'>
             <div className='tel1'>
@@ -72,16 +103,41 @@ const Patio = () => {
                 <p>Offer valid 7/1/24 to 7/7/24.<a href=''>*See Details.</a></p>
             </div>
             <br></br>
+            <div className='filters'>
+                    <input
+                        type="text"
+                        placeholder="Filter by name"
+                        value={filterName}
+                        onChange={(e) => setFilterName(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Min Price"
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Max Price"
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(e.target.value)}
+                    />
+                </div>
              <div className='telecart'>
-                    {products.map((product, index) => (
+                    {filteredPatio.map((product, index) => (
                         <div key={index} className='teleimg'>
-                            <img src={product.img} alt={product.name}></img>
+                            <img src={getImagePath(product.img)} alt={product.name}></img>
                             <div className='telecontent'>
                                 <div>🔥 17 people bought in the past 30 days</div>
                                 <p>4 More Options Available</p>
                                 <a>{product.name}</a>
                                 <h1>{product.price}</h1>
                                 <p>Delivery</p>
+                                <Rating
+                                averageRating={product.averageRating}
+                                ratingsCount={product.ratingsCount}
+                                onRate={(newRating) => handleRateProduct(index, newRating)}
+                            />
                             </div>
                             <div><button onClick={() => handleAddToCart(product)}>Add To Cart</button></div>
                         </div>

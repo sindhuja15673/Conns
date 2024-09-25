@@ -1,36 +1,65 @@
 
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../Telivision/Television.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../../saga/action/cartActions';
-import product1 from "../../../../images/dishwasher.webp";
-import product2 from "../../../../images/GTD.jpg";
-import product3 from "../../../../images/refridge.jpg";
 import product4 from "../../../../images/refrigerator.webp";
-import product5 from "../../../../images/dryer.jpg";
 import product6 from "../../../../images/ranges.webp";
-import product7 from "../../../../images/RF2.jpg";
 import { CartContext } from '../../../../Contexts/CartContext';
+import data from "../../../../products.json";
 
+import Rating from '../../../Rating';
 const Appliances1 = () => {
     // const { addToCart } = useContext(CartContext);
     const dispatch = useDispatch();
+    const [appliance, setAppliance] = useState([]);
+    const [filterName, setFilterName] = useState("");
+    const [minPrice, setMinPrice] = useState("");
+    const [maxPrice, setMaxPrice] = useState("");
 
+    useEffect(() => {
+        console.log("Data loaded:", data);
+        const applianceCategory = data.products.find(product => product.category === "Appliances");
+        if (applianceCategory) {
+
+            console.log("Television category found:", applianceCategory);
+            const updatedAppliances = applianceCategory.items.map(item => ({
+                ...item,
+                averageRating: item.averageRating || 0,
+                ratingsCount: item.ratingsCount || 0,
+              }));
+          setAppliance(updatedAppliances);
+        }
+        else {
+            console.log("No television category found");
+        }
+      }, []);
+
+      const handleRateProduct = (index, newRating) => {
+        const updatedAppliances = [...appliance];
+        const product = updatedAppliances[index];
+        product.averageRating = ((product.averageRating * product.ratingsCount) + newRating) / (product.ratingsCount + 1);
+        product.ratingsCount += 1;
+
+        setAppliance(updatedAppliances);
+        
+    };
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
         // alert('Product is added to cart')
         // addToCart(product);
     };
 
-    const products = [
-        { img: product1, name: 'Dishwasher', price: '$999' },
-        { img: product2, name: 'GTD', price: '$1,299' },
-        { img: product3, name: 'Refridge', price: '$899' },
-        { img: product4, name: 'Refrigerator', price: '$1,499' },
-        { img: product5, name: 'Dryer', price: '$799' },
-        { img: product6, name: 'Ranges', price: '$1,099' },
-        { img: product7, name: 'RF2', price: '$1,399' },
-    ];
+    const getImagePath = (img) => {
+        return require(`../../../../images/${img}`);
+    };
+
+    const filteredAppliances = appliance.filter(product => {
+        const matchesName = product.name.toLowerCase().includes(filterName.toLowerCase());
+        const matchesMinPrice = minPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) >= parseFloat(minPrice);
+        const matchesMaxPrice = maxPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) <= parseFloat(maxPrice);
+        return matchesName && matchesMinPrice && matchesMaxPrice;
+    });
 
     return (
         <div className='television'>
@@ -75,6 +104,7 @@ const Appliances1 = () => {
                     <h4>+Free Delivery and Installation on select LG & Samsung TVs.</h4>
                     <p>Offer valid 7/1/24 to 7/7/24.<a href=''>*See Details.</a></p>
                 </div>
+                
                 <div className='telimg'>
                     <div><img src={product4}></img>
                         <h5>"80+"</h5></div>
@@ -85,16 +115,41 @@ const Appliances1 = () => {
                     <div><img src={product6}></img>
                         <h5>50" to 59"</h5></div>
                 </div>
+                <div className='filters'>
+                    <input
+                        type="text"
+                        placeholder="Filter by name"
+                        value={filterName}
+                        onChange={(e) => setFilterName(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Min Price"
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Max Price"
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(e.target.value)}
+                    />
+                </div>
                 <div className='telecart'>
-                    {products.map((product, index) => (
+                    {filteredAppliances.map((product, index) => (
                         <div key={index} className='teleimg'>
-                            <img src={product.img} alt={product.name}></img>
+                            <img src={getImagePath(product.img)} alt={product.name}></img>
                             <div className='telecontent'>
                                 <div>🔥 17 people bought in the past 30 days</div>
                                 <p>4 More Options Available</p>
                                 <a>{product.name}</a>
                                 <h1>{product.price}</h1>
                                 <p>Delivery</p>
+                                <Rating
+                                averageRating={product.averageRating}
+                                ratingsCount={product.ratingsCount}
+                                onRate={(newRating) => handleRateProduct(index, newRating)}
+                            />
                             </div>
                             <div><button onClick={() => handleAddToCart(product)}>Add To Cart</button></div>
                         </div>

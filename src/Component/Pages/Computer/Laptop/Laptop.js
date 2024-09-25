@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../../saga/action/cartActions';
 import "../../Telivision/Television.css";
@@ -12,26 +12,34 @@ import tel3 from "../../../../images/tel3.jpg";
 import tel4 from "../../../../images/tel4.jpg";
 import tel5 from "../../../../images/tel5.jpg";
 import { CartContext } from '../../../../Contexts/CartContext';
-
+import data from '../../../../products.json'; 
 
 const Laptop = () => {
     // const { addToCart } = useContext(CartContext);
     const dispatch = useDispatch();
+    const [televisions, setTelevisions] = useState([]);
+
+
+    useEffect(() => {
+        console.log("Data loaded:", data);
+        const televisionCategory = data.products.find(product => product.category === "Television");
+        if (televisionCategory) {
+
+            console.log("Television category found:", televisionCategory);
+          setTelevisions(televisionCategory.items);
+        }
+        else {
+            console.log("No television category found");
+        }
+      }, []);
 
     const handleAddToCart = (product) => {
         
         dispatch(addToCart(product));
     };
-
-    const products = [
-        { img: tel1, name: 'Samsung 98” Q80C QLED 4K Smart TV 2023 - QN98Q80CAFXZA', price: '$5,999' },
-        { img: tel2, name: 'LG 98” Class QNED 4K LED QNED89T series TV with webOS 24 - 98QNED89TUA', price: '$5,999' },
-        { img: tel3, name: 'LG 83” Class C4 Series OLED evo 4K UHD Smart webOS TV - OLED83C4PUA', price: '$4,999' },
-        { img: tel4, name: 'LG 86” Class QNED 4K LED QNED85T series TV with webOS 24 - 86QNED85TUA', price: '$2,799' },
-        { img: tel5, name: 'LG 86” Class QNED80 URA Series 4K UHD Smart webOS 23 w/ThinQ AI TV - ', price: '$2,799' },
-        { img: tele4, name: 'LG 77” Class C4 Series OLED evo 4K UHD Smart webOS TV - OLED77C4PUA', price: '$3,299' }
-        
-    ];
+    const getImagePath = (img) => {
+        return require(`../../../../images/${img}`);
+    };
     return (
         <div className='television'>
             <div className='tel1'>
@@ -88,9 +96,9 @@ const Laptop = () => {
             </div>
             
              <div className='telecart'>
-                    {products.map((product, index) => (
+                    {televisions.map((product, index) => (
                         <div key={index} className='teleimg'>
-                            <img src={product.img} alt={product.name}></img>
+                            <img src={getImagePath(product.img)} alt={product.name}></img>
                             <div className='telecontent'>
                                 <div>🔥 17 people bought in the past 30 days</div>
                                 <p>4 More Options Available</p>

@@ -1,0 +1,208 @@
+{
+    "products": [
+      {
+        "category": "Television",
+        "description": "Component for displaying television products.",
+        "items": [
+          {
+            "img": "tel1.jpg",
+            "name": "Samsung 98” Q80C QLED 4K Smart TV 2023 - QN98Q80CAFXZA",
+            "price": "$5,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "tel2.jpg",
+            "name": "LG 98” Class QNED 4K LED QNED89T series TV with webOS 24 - 98QNED89TUA",
+            "price": "$5,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "tel3.jpg",
+            "name": "LG 83” Class C4 Series OLED evo 4K UHD Smart webOS TV - OLED83C4PUA",
+            "price": "$4,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "tel4.jpg",
+            "name": "LG 86” Class QNED 4K LED QNED85T series TV with webOS 24 - 86QNED85TUA",
+            "price": "$2,799",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "tel5.jpg",
+            "name": "LG 86” Class QNED80 URA Series 4K UHD Smart webOS 23 w/ThinQ AI TV",
+            "price": "$2,799",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "tele4.jpg",
+            "name": "LG 77” Class C4 Series OLED evo 4K UHD Smart webOS TV - OLED77C4PUA",
+            "price": "$3,299",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          }
+        ]
+      },
+      {
+        "category": "Mattress2",
+        "description": "Component for displaying mattress products.",
+        "items": [
+          {
+            "img": "matress1.webp",
+            "name": "Dreamspot Aurora Pillow Top Queen Mattress",
+            "price": "$5,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "matress3.webp",
+            "name": "Dreamspot Pandora Medium Full Mattress",
+            "price": "$5,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "matress2.webp",
+            "name": "Dreamspot Pandora Medium Queen Mattress",
+            "price": "$4,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "matress4.webp",
+            "name": "Dreamspot Pandora Medium King Mattress",
+            "price": "$2,799",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "matress5.jpg",
+            "name": "Dreamspot Celeste Medium Full Mattress",
+            "price": "$2,799",
+
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "matress6.jpg",
+            "name": "Dreamspot Celeste Medium King Mattress",
+            "price": "$3,299",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          }
+        ]
+      },
+      {
+        "category": "Patio",
+        "description": "Component for displaying patio furniture products.",
+        "items": [
+          {
+            "img": "patio1.webp",
+            "name": "La Palma 5-pc Patio Set",
+            "price": "$1,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "patio2.webp",
+            "name": "La Palma Sectional Set",
+            "price": "$5,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "patio3.webp",
+            "name": "La Palma Table",
+            "price": "$4,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "patio4.webp",
+            "name": "La Palma Chair",
+            "price": "$2,799",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "patio5.jpg",
+            "name": "Marquesa Table",
+            "price": "$2,799",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "patio6.jpg",
+            "name": "Tan 9 FT Round Umbrella with Crank and Tilt Function and Standing Umbrella Base",
+            "price": "$3,299",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          }
+        ]
+      },
+      {
+        "category": "Appliances",
+        "description": "Component for displaying patio furniture products.",
+        "items": [
+          {
+            "img": "dishwasher.webp",
+            "name": "Dishwasher",
+            "price": "$1,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "GTD.jpg",
+            "name": "GTD",
+            "price": "$5,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "refridge.jpg",
+            "name": "refrigerator",
+            "price": "$4,999",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "refrigerator.webp",
+            "name": "refrigerator",
+            "price": "$1,499",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "dryer.jpg",
+            "name": "Dryer",
+            "price": "$2,799",
+
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "ranges.webp",
+            "name": "Ranger",
+            "price": "$1,099",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          },
+          {
+            "img": "RF2.jpg",
+            "name": "RF2",
+            "price": "$1,399",
+            "averageRating": 4.5,
+            "ratingsCount": 10
+          }
+        ]
+      }
+    ]
+  }
+  
+
+  

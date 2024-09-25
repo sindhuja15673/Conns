@@ -1,6 +1,6 @@
 // import React,{useContext} from 'react';
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../saga/action/cartActions';
 import "../Telivision/Television.css";
@@ -8,31 +8,61 @@ import tele1 from "../../../images/tele1.jpg";
 import tele2 from "../../../images/tele2.jpg";
 import tele3 from "../../../images/tele3.jpg";
 import tele4 from "../../../images/tele4.jpg";
-import tel1 from "../../../images/tel1.jpg";
-import tel2 from "../../../images/tel2.jpg";
-import tel3 from "../../../images/tel3.jpg";
-import tel4 from "../../../images/tel4.jpg";
-import tel5 from "../../../images/tel5.jpg";
-import { CartContext } from '../../../Contexts/CartContext';
+import data from "../../../products.json";
+import Rating from "../../Rating";
 
 
 const Sofa = () => {
     const dispatch = useDispatch();
     // const { addToCart } = useContext(CartContext);
+    const [televisions, setTelevisions] = useState([]);
+    const [filterName, setFilterName] = useState("");
+    const [minPrice, setMinPrice] = useState("");
+    const [maxPrice, setMaxPrice] = useState("");
+
+    useEffect(() => {
+        console.log("Data loaded:", data);
+        const televisionCategory = data.products.find(product => product.category === "Television");
+        if (televisionCategory) {
+
+            console.log("Television category found:", televisionCategory);
+            
+            const updatedTelevision = televisionCategory.items.map(item => ({
+                ...item,
+                averageRating: item.averageRating || 0,
+                ratingsCount: item.ratingsCount || 0,
+              }));
+          setTelevisions(updatedTelevision);
+        }
+        else {
+            console.log("No television category found");
+        }
+      }, []);
+
+      const handleRateProduct = (index, newRating) => {
+        const updatedTelevision = [...televisions];
+        const product = updatedTelevision[index];
+        product.averageRating = ((product.averageRating * product.ratingsCount) + newRating) / (product.ratingsCount + 1);
+        product.ratingsCount += 1;
+
+        setTelevisions(updatedTelevision);
+        
+    };
     
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
       };
+      const getImagePath = (img) => {
+        return require(`../../../images/${img}`);
+    };
 
-    const products = [
-        { img: tel1, name: 'Parker Reclining Sofa & Loveseat', price: '$1,999' },
-        { img: tel2, name: 'Payne Sectional', price: '$5,999' },
-        { img: tel3, name: 'Abbott Sofa & Loveseat', price: '$4,999' },
-        { img: tel4, name: 'Bradford Sofa & Loveseat', price: '$2,799' },
-        { img: tel5, name: 'Commander Sofa & Loveseat ', price: '$2,799' },
-        { img: tele4, name: 'Nixon Sofa & Loveseat', price: '$3,299' }
-        
-    ];
+    const filteredTelevision = televisions.filter(product => {
+        const matchesName = product.name.toLowerCase().includes(filterName.toLowerCase());
+        const matchesMinPrice = minPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) >= parseFloat(minPrice);
+        const matchesMaxPrice = maxPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) <= parseFloat(maxPrice);
+        return matchesName && matchesMinPrice && matchesMaxPrice;
+    });
+    
     return (
         <div className='television'>
             <div className='tel1'>
@@ -87,16 +117,41 @@ const Sofa = () => {
                 <div><img src={tele4}></img>
                 <h5>50" to 59"</h5></div>
             </div>
+            <div className='filters'>
+                    <input
+                        type="text"
+                        placeholder="Filter by name"
+                        value={filterName}
+                        onChange={(e) => setFilterName(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Min Price"
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Max Price"
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(e.target.value)}
+                    />
+                </div>
                 <div className='telecart'>
-                    {products.map((product, index) => (
+                    {filteredTelevision.map((product, index) => (
                         <div key={index} className='teleimg'>
-                            <img src={product.img} alt={product.name}></img>
+                            <img src={getImagePath(product.img)} alt={product.name}></img>
                             <div className='telecontent'>
                                 <div>🔥 17 people bought in the past 30 days</div>
                                 <p>4 More Options Available</p>
                                 <a>{product.name}</a>
                                 <h1>{product.price}</h1>
                                 <p>Delivery</p>
+                                <Rating
+                                averageRating={product.averageRating}
+                                ratingsCount={product.ratingsCount}
+                                onRate={(newRating) => handleRateProduct(index, newRating)}
+                            />
                             </div>
                             <div><button onClick={() => handleAddToCart(product)}>Add To Cart</button></div>
                         </div>

@@ -1,33 +1,64 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../../../saga/action/cartActions';
 import "../../Telivision/Television.css";
-import mat6 from "../../../../images/matress6.jpg";
-import mat1 from "../../../../images/matress1.webp";
-import mat2 from "../../../../images/matress3.webp";
-import mat3 from "../../../../images/matress2.webp";
-import mat4 from "../../../../images/matress4.webp";
-import mat5 from "../../../../images/matress5.jpg";
 // import { CartContext } from '../../../../Contexts/CartContext';
+import data from '../../../../products.json';
+import Rating from "../../../Rating";
 
 
 const Matress2 = () => {
     // const { addToCart } = useContext(CartContext);
     const dispatch= useDispatch();
+    const [mattress, setMattress] = useState([]);
+    const [filterName, setFilterName] = useState("");
+    const [minPrice, setMinPrice] = useState("");
+    const [maxPrice, setMaxPrice] = useState("");
+
+
+    useEffect(() => {
+        console.log("Data loaded:", data);
+        const mattressCategory = data.products.find(product => product.category === "Mattress2");
+        if (mattressCategory) {
+
+            console.log("Mattress category found:", mattressCategory);
+            
+            const updatedMattress = mattressCategory.items.map(item => ({
+                ...item,
+                averageRating: item.averageRating || 0,
+                ratingsCount: item.ratingsCount || 0,
+              }));
+          setMattress(updatedMattress);
+        }
+        else {
+            console.log("No Mattress category found");
+        }
+      }, []);
+
+      const handleRateProduct = (index, newRating) => {
+        const updatedMattress = [...mattress];
+        const product = updatedMattress[index];
+        product.averageRating = ((product.averageRating * product.ratingsCount) + newRating) / (product.ratingsCount + 1);
+        product.ratingsCount += 1;
+
+        setMattress(updatedMattress);
+        
+    };
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
     };
 
-    const products = [
-        { img: mat1, name: 'Dreamspot Aurora Pillow Top Queen Mattress', price: '$5,999' },
-        { img: mat2, name: 'Dreamspot Pandora Medium Full Mattress', price: '$5,999' },
-        { img: mat3, name: 'Dreamspot Pandora Medium Queen Mattress', price: '$4,999' },
-        { img: mat4, name: 'Dreamspot Pandora Medium King Mattress', price: '$2,799' },
-        { img: mat5, name: 'Dreamspot Celeste Medium Full Mattress', price: '$2,799' },
-        { img: mat6, name: 'Dreamspot Celeste Medium King Mattress', price: '$3,299' }
-        
-    ];
+    const getImagePath = (img) => {
+        return require(`../../../../images/${img}`);
+    };
+    
+    const filteredMattress = mattress.filter(product => {
+        const matchesName = product.name.toLowerCase().includes(filterName.toLowerCase());
+        const matchesMinPrice = minPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) >= parseFloat(minPrice);
+        const matchesMaxPrice = maxPrice === "" || parseFloat(product.price.replace(/[^0-9.-]+/g, "")) <= parseFloat(maxPrice);
+        return matchesName && matchesMinPrice && matchesMaxPrice;
+    });
     return (
         <div className='television'>
             <div className='tel1'>
@@ -73,17 +104,41 @@ const Matress2 = () => {
                 <p>Offer valid 7/1/24 to 7/7/24.<a href=''>*See Details.</a></p>
             </div>
             <br></br>
-            
+            <div className='filters'>
+                    <input
+                        type="text"
+                        placeholder="Filter by name"
+                        value={filterName}
+                        onChange={(e) => setFilterName(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Min Price"
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(e.target.value)}
+                    />
+                    <input
+                        type="number"
+                        placeholder="Max Price"
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(e.target.value)}
+                    />
+                </div>
              <div className='telecart'>
-                    {products.map((product, index) => (
+                    {filteredMattress.map((product, index) => (
                         <div key={index} className='teleimg'>
-                            <img src={product.img} alt={product.name}></img>
+                            <img src={getImagePath(product.img)} alt={product.name}></img>
                             <div className='telecontent'>
                                 <div>🔥 17 people bought in the past 30 days</div>
                                 <p>4 More Options Available</p>
                                 <a>{product.name}</a>
                                 <h1>{product.price}</h1>
                                 <p>Delivery</p>
+                                <Rating
+                                averageRating={product.averageRating}
+                                ratingsCount={product.ratingsCount}
+                                onRate={(newRating) => handleRateProduct(index, newRating)}
+                            />
                             </div>
                             <div><button onClick={() => handleAddToCart(product)}>Add To Cart</button></div>
                         </div>
